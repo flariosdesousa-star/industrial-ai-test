@@ -1,72 +1,84 @@
 import streamlit as st
 import os
 from openai import OpenAI
+from pypdf import PdfReader
 
 # ==============================
-# CONFIGURAÇÃO DA PÁGINA
+# CONFIG
 # ==============================
-st.set_page_config(
-    page_title="Industrial AI Assistant",
-    layout="wide"
-)
-
+st.set_page_config(page_title="Industrial AI Assistant", layout="wide")
 st.title("🏭 Industrial AI Assistant")
-st.markdown("Gestão de Processos | Otimização Financeira | Estratégia Industrial")
+st.markdown("Gestão de Processos | Estratégia | Inteligência Empresarial")
 
-# ==============================
-# CAPTURA SEGURA DA API KEY
-# ==============================
 api_key = os.getenv("OPENAI_API_KEY")
 
 if not api_key:
-    st.error("❌ OPENAI_API_KEY não configurada. Configure nas Secrets do Streamlit.")
+    st.error("Configure OPENAI_API_KEY nas Secrets.")
     st.stop()
 
 client = OpenAI(api_key=api_key)
 
 # ==============================
-# CONTROLE DE CONVERSA
+# BASE DE CONHECIMENTO
+# ==============================
+if "knowledge_base" not in st.session_state:
+    st.session_state.knowledge_base = ""
+
+uploaded_file = st.file_uploader("📂 Upload de material (PDF ou TXT)", type=["pdf", "txt"])
+
+if uploaded_file:
+    if uploaded_file.type == "application/pdf":
+        pdf = PdfReader(uploaded_file)
+        text = ""
+        for page in pdf.pages:
+            text += page.extract_text()
+        st.session_state.knowledge_base += text
+    else:
+        text = uploaded_file.read().decode("utf-8")
+        st.session_state.knowledge_base += text
+
+    st.success("Material adicionado à base de conhecimento.")
+
+# ==============================
+# CHAT
 # ==============================
 if "messages" not in st.session_state:
-    st.session_state.messages = [
-        {
-            "role": "system",
-            "content": "Você é um especialista em indústria, gestão de processos e otimização financeira empresarial."
-        }
-    ]
+    st.session_state.messages = []
 
-# ==============================
-# INPUT DO USUÁRIO
-# ==============================
-user_input = st.chat_input("Digite sua pergunta industrial...")
+user_input = st.chat_input("Pergunte algo sobre indústria ou estratégia...")
 
-# Mostrar histórico
-for msg in st.session_state.messages[1:]:
+for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-# ==============================
-# PROCESSAMENTO DA IA
-# ==============================
 if user_input:
+
+    # Monta contexto com material enviado
+    contexto = f"""
+    Use o seguinte material como base para responder:
+
+    {st.session_state.knowledge_base}
+
+    Pergunta do usuário:
+    {user_input}
+    """
+
     st.session_state.messages.append({"role": "user", "content": user_input})
 
     with st.chat_message("user"):
         st.markdown(user_input)
 
-    try:
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=st.session_state.messages
-        )
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": "Você é especialista em gestão industrial e mentoria empresarial."},
+            {"role": "user", "content": contexto}
+        ]
+    )
 
-        answer = response.choices[0].message.content
+    answer = response.choices[0].message.content
 
-        with st.chat_message("assistant"):
-            st.markdown(answer)
+    with st.chat_message("assistant"):
+        st.markdown(answer)
 
-        st.session_state.messages.append({"role": "assistant", "content": answer})
-
-    except Exception as e:
-        st.error("Erro ao conectar com a OpenAI.")
-        st.write(e)
+    st.session_state.messages.append({"role": "assistant", "content": answer})

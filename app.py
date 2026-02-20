@@ -1,84 +1,116 @@
 import streamlit as st
 import os
 from openai import OpenAI
-from pypdf import PdfReader
 
 # ==============================
-# CONFIG
+# CONFIGURAÇÃO DA PÁGINA
 # ==============================
-st.set_page_config(page_title="Industrial AI Assistant", layout="wide")
+st.set_page_config(
+    page_title="Industrial AI Assistant",
+    layout="wide"
+)
+
 st.title("🏭 Industrial AI Assistant")
-st.markdown("Gestão de Processos | Estratégia | Inteligência Empresarial")
+st.markdown("Inteligência Estratégica para Indústria, Gestão e Finanças")
 
+# ==============================
+# CAPTURA SEGURA DA API KEY
+# ==============================
 api_key = os.getenv("OPENAI_API_KEY")
 
 if not api_key:
-    st.error("Configure OPENAI_API_KEY nas Secrets.")
+    st.error("❌ OPENAI_API_KEY não configurada. Configure nas Secrets do Streamlit.")
     st.stop()
 
 client = OpenAI(api_key=api_key)
 
 # ==============================
-# BASE DE CONHECIMENTO
+# CARREGAR BASE DE CONHECIMENTO
 # ==============================
-if "knowledge_base" not in st.session_state:
-    st.session_state.knowledge_base = ""
+def carregar_conhecimento():
+    base_texto = ""
+    pasta = "knowledge"
 
-uploaded_file = st.file_uploader("📂 Upload de material (PDF ou TXT)", type=["pdf", "txt"])
+    if os.path.exists(pasta):
+        for arquivo in os.listdir(pasta):
+            caminho = os.path.join(pasta, arquivo)
 
-if uploaded_file:
-    if uploaded_file.type == "application/pdf":
-        pdf = PdfReader(uploaded_file)
-        text = ""
-        for page in pdf.pages:
-            text += page.extract_text()
-        st.session_state.knowledge_base += text
+            if arquivo.endswith(".txt"):
+                try:
+                    with open(caminho, "r", encoding="utf-8") as f:
+                        base_texto += f.read() + "\n\n"
+                except Exception as e:
+                    st.warning(f"Erro ao ler {arquivo}: {e}")
     else:
-        text = uploaded_file.read().decode("utf-8")
-        st.session_state.knowledge_base += text
+        st.warning("Pasta 'knowledge' não encontrada.")
 
-    st.success("Material adicionado à base de conhecimento.")
+    return base_texto
+
+BASE_CONHECIMENTO = carregar_conhecimento()
 
 # ==============================
-# CHAT
+# INICIALIZAR HISTÓRICO
 # ==============================
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-user_input = st.chat_input("Pergunte algo sobre indústria ou estratégia...")
+# ==============================
+# INPUT DO USUÁRIO
+# ==============================
+user_input = st.chat_input("Faça sua pergunta estratégica...")
 
+# Mostrar histórico
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
+# ==============================
+# PROCESSAMENTO DA IA
+# ==============================
 if user_input:
-
-    # Monta contexto com material enviado
-    contexto = f"""
-    Use o seguinte material como base para responder:
-
-    {st.session_state.knowledge_base}
-
-    Pergunta do usuário:
-    {user_input}
-    """
 
     st.session_state.messages.append({"role": "user", "content": user_input})
 
     with st.chat_message("user"):
         st.markdown(user_input)
 
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[
-            {"role": "system", "content": "Você é especialista em gestão industrial e mentoria empresarial."},
-            {"role": "user", "content": contexto}
-        ]
-    )
+    # Construção do contexto fixo da empresa
+    contexto = f"""
+Você é uma Inteligência Artificial especializada em:
 
-    answer = response.choices[0].message.content
+- Gestão Industrial
+- Mentoria Empresarial
+- Estratégia de Crescimento
+- Otimização Financeira
+- Processos Industriais
 
-    with st.chat_message("assistant"):
-        st.markdown(answer)
+Utilize como base de conhecimento o material abaixo:
 
-    st.session_state.messages.append({"role": "assistant", "content": answer})
+{BASE_CONHECIMENTO}
+
+Responda de forma estratégica, prática e voltada para aplicação empresarial real.
+
+Pergunta do usuário:
+{user_input}
+"""
+
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": "Você é um consultor estratégico industrial de alto nível."},
+                {"role": "user", "content": contexto}
+            ],
+            temperature=0.3
+        )
+
+        answer = response.choices[0].message.content
+
+        with st.chat_message("assistant"):
+            st.markdown(answer)
+
+        st.session_state.messages.append({"role": "assistant", "content": answer})
+
+    except Exception as e:
+        st.error("Erro ao conectar com a OpenAI.")
+        st.write(e)

@@ -1,2 +1,8 @@
 streamlit
 openai
+streamlit
+openai
+pypdf
+tiktoken
+numpy
+faiss-cpu

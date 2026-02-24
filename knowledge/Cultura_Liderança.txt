@@ -1,860 +1,122 @@
-00:00:00
-Speaker 1
-Boa tarde. Valeu, obrigado.
-00:00:04
-Speaker 2
+openai
+numpy
+scikit-learn
 
-E aí, última? Sim, eu pensei, né? Ah, então beleza, pô. Ainda bem, ainda bem. Muito bom, pessoal. Prazer estar aqui com vocês hoje. A gente vai falar um pouquinho de cultura, liderança, gestão de pessoas. São temas que podem ser muito abstratos ou muito concretos,
-00:00:36
-Speaker 2
-dependendo da ótica que a gente aborda. E a ideia hoje é a gente tentar fazer com que esses temas, eles sejam o mais aplicáveis possível pro negócio de vocês. Então a gente vai passar por alguns conteúdos talvez mais conceituais, mas a ideia é a gente de fato aplicar os negócios. Que é por isso que vocês estão aqui, obviamente. Então, me apresentando bem rapidinho, eu sou sócio-fundador da Canoa Capital. A Canoa Capital é uma gestora de investimentos.
-00:01:07
-Speaker 2
-A gente compra empresas que têm, na média, faturam de 50 a 150 milhões de reais. A gente compra essas empresas, tipicamente são empresas boas, que estão crescendo, que têm seus desafios, mas que elas estão bem posicionadas para os seus desafios. E que, normalmente, têm alguma questão societária, alguma questão de governança, uma falta de sucessão. Às vezes, um empresário está tocando esse negócio há 25, 30 anos e a filha dele é médica,
-00:01:40
-Speaker 2
-não tem nada a ver com ser distribuidora de fitas adesivas do pai. E a gente vai lá e compra essas empresas, ajusta uma coisa ou outra na gestão e toca esse negócio. Isso que eu faço hoje, 99% do meu tempo. E de vez em quando eu venho aqui no G4 e passo uma tarde, um dia com vocês, falando de temas como liderança, cultura, eu também faço uma outra aula de gestão financeira que vocês tiveram no primeiro dia, e participo também como mentor no gestão e estratégia.
-00:02:13
-Speaker 2
-que é o programa presencial com a turma, com o Tales Alfredo Mardom, o Napoli. E antes da Canoa, eu trabalhei num outro fundo, que é um fundo grande aqui no Brasil, tem mais ou menos uns 10 bilhões sobre gestão, também compro empresas, mas de diferentes formatos. Mas antes disso, e a maior parte da minha vida, foi na verdade tocando negócio. Começando, liderando, passando perrengue, barriga no balcão. Isso é o que eu fiz agora, vai, 80, 90% do meu tempo profissional.
-00:02:47
-Speaker 2
-Eu sou lá do Rio, estudei engenharia na faculdade, na UFRJ. Fui. Logo no primeiro ano, no segundo, já percebi que eu não queria em engenharia, mas eu falei, faço outro vestibular, nem que me paguem, então baixei a cabeça e sobrevivi em engenharia. Aí depois eu vim trabalhar em consultoria aqui em São Paulo, mas logo no começo da carreira eu percebi que eu queria empreender, e foi assim que eu conheci o Thales, o Vini e o Marcinho. Eles estavam fundando a Easy Taxi, e eles estavam buscando duas outras pessoas para trocar um negócio com eles,
-00:03:18
-Speaker 2
-o Denis e eu. O Denis vocês conheceram hoje de manhã, né? E eu, a gente entrou com uma ou duas semanas de diferença, e passamos todo esse tempo lá juntos. Isso foi em 2012. Em 2014, o Thales saiu da operação, saiu do dia a dia, e depois quem tocou o negócio até a venda fui eu e o Denis. Então, foi uma experiência super legal. O Denis tinha o papel de CEO e olhava muito da porta para fora, falava com investidores, estratégia, tecnologia, alguns temas...
-00:03:51
-Speaker 2
-Como esses, relações públicas, e vai da porta pra dentro, quem tava tocando o negócio era eu. Então, pra mim foi um baita desafio, porque com 25 anos eu tinha 1.100 pessoas, 1.200 pessoas no meu time, não tinha estudado nada de administração de empresas, não foi engenharia que me ensinou isso, cálculo 4, teorema de Laplace, nada a ver, e doido, muito menos o FRJ, né, que não tinha nenhuma pegada com liderança de negócios e muito menos.
-00:04:23
-Speaker 2
-com business. Então, muito do que a gente fez lá na Eaze... Foi com base no bom senso, na cultura e muita coragem. E um pouco de ingenuidade e sem noção também, né? Porque em determinado momento a gente estava lançando o negócio para competir com o chinês na China. E não tinha nenhum chinês, ninguém falava nada de chinês no time, né? Então, esse era o tipo de decisão que a gente tomou. Mas, no final das contas, foi uma empresa que a gente vendeu um pouco menos de 200 milhões de dólares.
-00:04:54
-Speaker 2
-Então, foi uma venda bem legal. E com um baita aprendizado ao longo desse tempo, né? E eu falo que cultura foi importante porque, no intervalo de 18 meses, a gente abriu operação em 20 países. É mais do que abrir operação em um país por mês. E abrir operação é... Eu fiz isso em uns 12, 13 países. Pegava lá o avião, a mochilinha, chegava no lugar, procurava uma gráfica. Aí imprimia o flyer.
-00:05:26
-Speaker 2
-Aí a gente pensou, onde é que vai estar um posto de gasolina? Buscar um posto de gasolina. Ah, tentava negociar com o dono do posto de gasolina, dois, três lugares, escolhi o melhor e começava a falar com os taxistas. E aí você ia descobrindo as coisas. Aí você descobria coisas como, no Peru, não existe taxímetro. Eu não fazia a menor ideia, não sabia nem que existia. O táxi podia existir sem taxímetro, não sabia. É uma realidade. Pessoas, pra pedir táxi no Peru, paravam e nem tinha táxi no Peru também. Não tinha táxi no Peru também.
-00:05:56
-Speaker 2
-Pessoas paravam, ficavam assim, na rua, fazendo sinal de táxi, até alguém que, de fato, trabalhasse como táxi também passasse e parasse. Aí você tentava uma pessoa, a pessoa, não, não tem nada a ver. Outra também, nada a ver. Aí um quarto o cara para e fala, pô, vai pra onde? Vou pra Miraflores, vou pra Pinheiros. Quanto que custa? 15? Quanto? Não, 15 não, tá muito caro. Pago 13? Não. Eles negociavam, quando tava todo mundo atrás parado e buzinando. Então a gente pegava realidades como essa... Até realidades como a Coreia do Sul, que era um país ultra tecnológico.
-00:06:31
-Speaker 2
-A privada dos caras tinha uns 30 botões. Tinha botão que eu não queria nem apertar. E assim, é a realidade dos caras. Então a gente precisava navegar essas diferenças com times, sêniores em cada lugar, com regras de impostos financeiros, e fazer uma série de outras questões em cada um dos lugares e ver como você conectava isso tudo na cultura. Não foi no processo financeiro, não foi no processo de administração de empresas.
-00:07:06
-Speaker 2
-A gente trazia pessoas que tinham muito senso de dono, que trabalhavam como se de fato eles fossem donos do negócio. A gente trazia pessoas que tomavam decisão muito rápido. A gente não podia esperar. Às vezes estava pegando fogo em algum lugar... Podia esperar, pô, mas eu fico diferente, ah, mas a ligação, ah, mas não sei quem tá no avião. E uma série de outros pontos culturais que a gente vai abordar aqui. E depois da venda da Easy, eu fui fazer uma MBA, eu tava com muita vontade de estudar administração de empresas, e pra mim uma das coisas que foram mais transformadoras na minha vida foi ter conseguido passar pra estudar em Harvard.
-00:07:42
-Speaker 2
-Isso pra mim foi uma loucura, foi um sonho se tornando realidade, que não era minha realidade. Na minha família ninguém tinha estudado fora, pô, minha mãe era vendedora de loja de roupa, sabe, tinha uma vida ali de classe média, funcionava bem e tudo mais, mas um negócio completamente, assim, surreal. E lá eu comecei a aprender mais sobre diferentes negócios, liderança, diferentes indústrias, conheci sobre investimentos. Não conhecia nada da Faria Lima, hoje já consigo ter uma boa noção de como que funciona,
-00:08:15
-Speaker 2
-o fluxo do dinheiro, o que que investe aqui, o que que investe lá, quais são os incentivos, o que que acontece. E foi tudo isso, estudando dois anos, lá em Boston, que de fato abriram a minha cabeça. E aí depois, meio fast forward desse negócio, ainda continuei trabalhando em tecnologia por um tempo, fui trabalhar numa startup na Alemanha, depois voltei para o Brasil, comecei um novo negócio, chamada Em Casa, no mercado imobiliário. E aí depois de cinco, seis anos tocando esse negócio como CEO, vendi parte das minhas ações, passei o bastão para um outro cara que começou o negócio comigo, que toca o.
-00:08:47
-Speaker 2
-negócio até hoje, e fui fazer investimentos, que é o que eu venho fazendo nos últimos quatro anos. Então isso é um pouquinho de mim, eu vou tentar fazer alguns paralelos, alguns aprendizados que eu tive nesses lugares. E a ideia daqui hoje, pessoal, é a gente aprofundar em três principais pontos. Dois relacionados à cultura e um relacionado à liderança e gestão de pessoas. Por que esses pontos?
-00:09:17
-Speaker 2
-Porque esses pontos foram as principais dores levantadas por alunos como vocês aqui do Traction. Então a gente tem uma aula aqui hoje muito focada em interessar esses pontos. E se tiver alguma questão que a gente não tenha abordado, a gente vai ter uma hora de mentoria no final, que é uma dinâmica de perguntas e respostas. Vocês já fizeram isso várias vezes. E aí a gente consegue pegar, opa, não falamos tanto desse negócio aqui, vamos falar, ah, não falamos muito de Stock Option em empresa, podemos falar.
-00:09:50
-Speaker 2
-Então esse é um pouco da dinâmica aqui hoje. Primeiro ponto, como que a gente estrutura uma cultura? Qual a cultura que a gente quer? Qual é a cultura que a gente quer aqui na empresa do Luiz? Na empresa do Henrique? GB Live? Qual é a cultura da GB Live? Como que a gente constrói isso? E isso passa muito por um exercício de essência, de propósito. O que a gente quer? Onde a gente quer chegar?
-00:10:20
-Speaker 2
-Como a gente vai chegar lá? Então a gente vai falar um pouquinho de criar uma cultura. O que é desenhar uma cultura? Dois, a gente vai pensar em implementação. Claro, não adianta a gente fazer, desenhar aqui uma cultura, pô, legal, bacana, bonito, vou botar no LinkedIn, compartilhar com todo mundo, mas você olha pra trás, realidade completamente diferente. Exemplo bobo. Eu, quando tinha 18 anos, eu fui trabalhar por três meses num restaurante nos Estados Unidos pra aprender inglês.
-00:10:54
-Speaker 2
-E eu trabalhava no maior restaurante da cidade, que era num resort de esqui. Era o maior resort de esqui da cidade, o restaurante era gigante. Digo, eu tenho umas 20 pessoas só na cozinha trabalhando, 20, 25. E eu era um dos quatro lavadores de louça, né? Legal pra caramba. E ficavam lá quatro, eu e mais três brasileiros. E a cultura da cozinha, uma cultura que a galera era muito relaxada. Aquele trabalho de 25 pessoas talvez pudesse ser feito com 10, 12.
-00:11:25
-Speaker 2
-Mas, a gente ficava lá de boa, batendo papo, lavando e tal, contando da resenha, com não sei o quê. E era uma cultura de camaradagem, todo mundo, sabe, um ajudava o outro. E era curioso porque era o oposto do que eles tinham como os valores da empresa lá do resort de esqui. E eu lembro muito também de um chefe que a gente tinha, que era o dono lá da... o cara que olhava a cozinha, né? E ele andava com um bolo de chave aqui do lado, assim.
-00:11:55
-Speaker 2
-Então, na hora que o chefe vinha, você escutava antes aí, né? Estava todo mundo lavando a louça mais de boa. Na hora que você escutava o barulho da chave, todo mundo começava... Um exemplo de cultura do que é executado quando não tem um chefe olhando, completamente diferente do que tem na parede. No próximo ponto, a gente vai abordar como que a gente consegue juntar essas duas coisas. E a boa notícia é que tem um monte de ferramentazinha. Um monte de boa prática, um monte de estudo, pra gente conseguir, de fato, fechar esse gap.
-00:12:28
-Speaker 2
-E o terceiro ponto, como contratar e desenvolver líderes e pessoas, pra não só garantir que essa cultura seja permeada ao longo do tempo, mas que também isso seja uma das fortalezas da companhia. Então a gente vai passar ponto 1, ponto 2, ponto 3, e aí depois a gente dá um pause e volta depois para a sessão de mentoria. Beleza? Combinado? Bom demais. Então vamos lá, definição de cultura. Cultura é, parece até aquela parte lá do Tropa de Elis, né, estratégia, né?
-00:13:04
-Speaker 2
-Cultura nada mais é, pessoal, do que é o conjunto de como as pessoas se comportam. O que elas fazem, o que elas pensam, como elas brincam, como que elas, o que elas usam, enfim, como que grupos se comportam. E no perfil de uma empresa, é basicamente como que as pessoas da empresa agem quando os donos não estão lá olhando. Isso é o que é a cultura de verdade. Muito fácil de resumir. É o que as pessoas fazem quando o chefe não está lá olhando, né,
-00:13:37
-Speaker 2
-ou dando bronca no pessoal, puxando a orelha. E a cultura, ela é uma analogia muito legal, é que ela é tipo um iceberg. E aí em cima, você vê algumas coisinhas. Ah, quais são os benefícios do escritório, tem a política, o organograma, papapá, pipipi, papapá. Mas o que mais importa mesmo é a parte de baixo. A parte de baixo é muito mais relevante do que a parte de baixo.
-00:14:07
-Speaker 2
-São os valores, como que as pessoas tomam decisão, como que o cara é promovido. Por que ele é promovido? Isso é muito mais importante do que o ritual, o vestuário do pessoal. Quais são as motivações? O que tem de viés aqui? É uma empresa que, poxa, só tem homem na liderança? Bom, então é mais fácil você ser líder se você é homem? Não sei. Essas são coisas que não estão escritas. Ninguém vai escrever isso lá em cima.
-00:14:37
-Speaker 2
-Isso tudo são questões que as pessoas sentem. Ninguém é bobo, todo mundo sabe. É o cafezinho que você vai falar, não está escrito em nenhum lugar. Mas é o que realmente importa. É aqui que move o ponteiro. Não é a parte de cima. E muita gente pergunta, mas cultura? Cultura é coisa de movement. Cultura é coisa de estatupeiro, de não sei o que. Empresa grande não. Empresa grande é performance, meta e entregar o que tem que ser entregue.
-00:15:09
-Speaker 2
-Mais ou menos. Primeiro vou passar alguns dados, depois a gente fala de alguns exemplos. Aqui são dados não do custal. Três vezes mais crescimento de receita em empresas com cultura forte. Quem disse isso foi rápido. Menos rotatividade, um terço menos rotatividade em empresas que têm um alinhamento cultural. Deloitte. Número 15, 70% das transformações falham por razões culturais e não por um elemento de processo ou de mercado ou de não sei o quê.
-00:15:40
-Speaker 2
-30% de performance explicada pela cultura, 62% mais falhas, 91% dos CEOs vêm em cultura tão crítica quanto estratégia. E o mais curioso é que só 19% das pessoas de fato acham que têm a cultura que gostariam. 19%. Vamos fazer uma pesquisa rápida aqui, hoje se você parasse, fechasse o olho e pensasse. Eu tenho a cultura que eu gostaria na minha empresa, levando em consideração que nada.
-00:16:13
-Speaker 2
-é perfeito. Então se eu tenho 90% da cultura que eu gostaria, você tem a cultura que você gostaria. Se você tem 30% da cultura, 40, 50% da cultura que você gostaria, você não tem a cultura que você gostaria. Hoje, quem acha que... Você tem a cultura que gostaria na empresa. Mais ou menos. Se puder levantar a mão. 2, 3, 4, 5, 6, 7. Ó, vou ser gente boa, vou arredondar pra 10. De quantas pessoas aqui?
-00:16:45
-Speaker 2
-Não sei, 130? 140? 150? Pô, 7, 8%. E é bem o retrato da realidade. É bem o retrato da realidade. Porque não tem... É muito difícil a gente... A cultura é muito uma questão de longo prazo. A gente não está tomando uma decisão cultural aqui, visando o resultado de amanhã. Não vai trazer o resultado de amanhã. O que vai trazer o resultado de amanhã? Fazer uma daily com os vendedores.
-00:17:15
-Speaker 2
-Você vai fazer o resultado de amanhã. E é uma questão quase que onipresente. A gente está sempre preocupado com o resultado de amanhã. Mas tem que entregar, a meta está lá para ser batida. Se a gente não fizer isso, o nosso competidor vai fazer. O contrato não sei o quê. Sexta-feira a gente estava no gestão estratégia aqui, aí o cara falou assim, acabei de ver aqui que o meu competidor baixou o preço, vou perder essa proposta. É isso. É o nosso dia a dia. Só que se a gente não tira um tempinho do nosso dia a dia.
-00:17:46
-Speaker 2
-para pensar no longo prazo, a cultura vai ser sempre despriorizada. E por que é coisa de empresa grande? Eu estava assistindo esses dias naquele Netflix, o tempo está sobrando. Estava assistindo o seriado, o seriado não, o documentário do acidente de Congonhas. Alguém já viu esse documentário? Bom pra caramba, hein? Bom pra caramba. Não para ver as pessoas morrendo, mas explicando o passo a passo do negócio,
-00:18:19
-Speaker 2
-o que está por trás. Gente, acidente de Congonhas, problema 100% cultural. 100% cultural. Avião sempre vai ter uma falha ou outra. Mas aí você vê. Por quê? Cara, o manifesto... Olha aqui o meu corpo. O manifesto da Latam. Datam, na época. Primeiro item do manifesto, dos valores da empresa. Primeiro item. Não é o décimo. Primeiro. Lucro acima de tudo.
-00:18:51
-Speaker 2
-Quem? Pessoal que assistiu pode falar. Não estou mentindo. É verdade. Lucro acima... Lucro é importante. Acima de tudo. É um statement muito forte isso. E mostra. Porra, aí você tem menos treinamento. Aí você está mais disposto a tomar risco. Só que tem negócio que a gente pode tomar risco. Negócio que a gente não pode tomar risco. Easy Taxi. Porra, perdeu o táxi, hein? Pode tomar risco. Direto. Lançando cidade, então, o pessoal vai ficar puto. Não tem problema. A gente pensa nisso um pouquinho pra frente. Ok.
-00:19:22
-Speaker 2
-Segurança? Porra, não dá pra tomar risco. E tem vários, cara. Lojas americanas, problema cultural total. Aquele problema lá, aquele rombo de 20 bilhões de reais já apareceu do dia pra noite. É uma cultura com pouca transparência. É uma cultura de você seguir a qualquer custo o que o chefe tá falando. É uma cultura do medo. É uma cultura da falta de informação. E aí você vai se agregando. Odebrecht, mesmo... Gente, sempre tem um elemento cultural. Só que cultura, ela tem os maiores impactos no médio ou no prazo.
-00:19:53
-Speaker 2
-Ela não tem no curto prazo. Enfim, importante cultura, né? Como que a gente desenha uma cultura? Lá onde que a gente começa. E é sempre importante a gente olhar pra dentro. E que, assim como a gente, que a gente tem a nossa identidade, a Marcia tem a identidade dela, a Luciana tem a identidade dela. Ah, poxa, gosto mais de exercício, menos de exercício. Passo mais tempo com meus amigos, valorizo o ar, quero... Todos nós, a gente tem as nossas crenças, a nossa essência.
-00:20:25
-Speaker 2
-A nossa forma de, a nossa visão de mundo e a empresa é a mesma coisa, a gente precisa pensar nisso. Porque se a gente não pensa nisso, as coisas vão acontecendo e a identidade organizacional vai sendo moldada com as coisas que a gente tolera e não com as coisas que a gente quer. Então é um exercício muito importante, muito provavelmente boa parte de vocês já ouviu o tal do propósito, da visão, da missão, dos valores, mas esse é um ponto de partida muito, muito legal e ele é tão conhecido porque ele é muito eficiente, com um esforço.
-00:21:02
-Speaker 2
-relativamente pequeno a gente consegue ter uma boa noção do que a gente quer como cultura da empresa, o que a gente quer como identidade organizacional. E esses quatro itens, eles basicamente são o porquê, o como, o porquê, o que, o onde e o porquê a gente faz as coisas. Então, o propósito é por que a gente existe? Por que a empresa existe? Por que a distribuidora de fitas adesivas existe? Por que a empresa do fulano de tal existe?
-00:21:33
-Speaker 2
-Por que a empresa que eu trabalho hoje existe? Por que a empresa que eu criei existe? Por que eu deveria existir? Esse é um ponto muito importante para a gente definir a nossa cultura. O segundo item é o quê? O que ela representa? O que a gente faz para a gente chegar lá? A gente existe para deixar as pessoas felizes, para reduzir a complexidade, para facilitar a indústria XYZ, para dar mais acesso às pessoas, enfim, o motivo que for.
-00:22:04
-Speaker 2
-A missão, o que a gente faz para atingir esse propósito? Foco maior na organização, mais interno. Enquanto o propósito é mais aspiracional... A missão é mais um negócio mais concreto. O que a gente faz? Qual é o foco da organização? Visão é o mais fácil. Visão é, beleza, tudo bem, a gente tem um propósito, a gente existe por esse motivo, a gente faz isso. Onde que a gente quer chegar, então?
-00:22:35
-Speaker 2
-A gente quer dominar o mundo ou a gente quer dominar a raça olhada da serra? A gente quer ter um pouquinho de tudo, um impacto muito grande, mas diluído, ou quer ter um impacto muito grande, concentrado? Esse é o tipo de coisa que você pensa quando você faz esse exercício. E, por fim, os valores. Eu valorizo mais urgência ou qualidade? Transparência ou... Esse tipo de discussão são os valores da companhia.
-00:23:06
-Speaker 2
-Então, representa como que ela é, como que ela quer ser vista, não só para a sociedade do mercado, mas também para os seus próprios funcionários. Quatro coisinhas, propósito, missão, visão e valores. Na hora que a gente junta esses quatro, a gente tem uma boa noção de que é a cultura que a gente quer. Ainda não é exatamente a cultura, se a gente somar um lado e o outro lado, não dá exatamente a cultura. Mas dá uma boa base para a gente chegar lá. Vou trazer alguns exemplos aqui, para a gente passar por algumas companhias.
-00:23:41
-Speaker 2
-Então, Johnson & Johnson, o universo paixão, ciência para impactar profundamente a saúde da humanidade. É o que Johnson & Johnson fala. Essa é a razão, o propósito da Johnson & Johnson. Walt Disney, inspirar um mundo melhor por meio das histórias. Olha que bacana. Nubank, Nubank sempre tem, sempre usado como exemplo, porque eles nunca falam, ah, não, pô, fazer o cartão de crédito. Não, eles querem reduzir a complexidade, aumentar acesso às pessoas.
-00:24:12
-Speaker 2
-Então, esse é o tipo de propósito. Por que a empresa existe? É mais profundo do que exatamente o que você faz ali. E tudo bem, a gente cria um monte de negócio sem propósito no começo. Eu já criei também. Mas esse é um exercício interessante porque, apesar de no dia a dia você estar na batalha, estar na guerra, na trincheira, etc., você ter muito claro por que você existe te ajuda nos próximos anos aqui pra frente. Te ajuda a pensar na cultura que você precisa, nas pessoas que você precisa,
-00:24:45
-Speaker 2
-como que você vai se comunicar com o mercado, como que você se adapta às tendências. É muito mais fácil você ter controle dessa narrativa. Missão. Ah, missão já vai mais pra uma linha do foco da organização. O que a gente está fazendo aqui? Então TED, TED Talk. Ah, fomentar a disseminação de grandes ideias. Tesla, transição do mundo pra energia sustentável. Google, organizar as informações do mundo. Os profissionais do mundo lobo. Aqui a gente já fala um pouco mais do lobo.
-00:25:15
-Speaker 2
-Não é exatamente modelo de negócio, mas o que a gente faz, o que a empresa faz no dia a dia. Visão. Onde a gente quer chegar nos próximos cinco anos. Em geral, esse é o grande sonho, a grande meta que está, em geral, nas conversas, quando se faz a reunião com a empresa inteira. Então, G4. Poxa, quantas pessoas já viram o G4 falando de um milhão de empregos até 2030? Falando nisso, tempo e tempo. Então, tempo e tempo, tempo e tempo. Pergunta para qualquer pessoa do G4, a pessoa sabe. Pá, na ponta da língua.
-00:25:48
-Speaker 2
-E, por fim, os valores. Os valores são, tipicamente, a forma que você quer fazer as coisas. Ah, então, Walt Disney. Eu quero fazer com qualidade, com inovação, comunidade, narrativa, otimismo. É diferente de uma indústria, que quer fazer com controle de custos. Não pode ter defeito, prazo. Cada uma tem seu formato diferente.
-00:26:19
-Speaker 2
-E aqui é quando a gente começa a dar o primeiro passinho para a cultura, pessoal. E os valores, eles só viram cultura na hora que você tem o comportamento repetido. Então não adianta a gente ter os valores se eles não viram comportamento repetido. Por exemplo, a gente quer uma cultura de confiança. Pô, todo mundo quer uma cultura de confiança, né? Quando que esse valor vira cultura, de fato? Quando no dia a dia as pessoas são transparentes umas com as outras.
-00:26:52
-Speaker 2
-Quando elas conseguem trabalhar em equipe. Então não dá alguma merda e você não fica segurando a informação. Você liga pro supervisor, fala com o fulano que está, tenta resolver. O primeiro é o valor. Confiança. Confiança é um valor. Mas ele só vira cultura na hora que você tem as ações ali no dia a dia. Faz sentido essa distinção? Um negócio é o que a gente quer, outro é o dia a dia da companhia.
-00:27:24
-Speaker 2
-Propósito, missão, visão, valores. Pra gente não ficar muito aqui no abstrato, a gente vai fazer um exercício rápido aqui, pra gente botar no papel. A melhor forma, pessoal, é sempre botando no papel. Sempre botando no papel. Então a gente vai fazer aqui, a gente vai descrever o que é o propósito, porque não é, pessoal, não é decorado, tá? Não é entrar no site aqui da empresa e ver o que eles anotaram. É o que vocês enxergam, o que vocês gostariam, o que vocês acham que deveria ser.
-00:27:57
-Speaker 2
-Esquece o que a empresa faz. O que a empresa deveria fazer? 7, 8% do mundo. 7, 8% das pessoas que acham que a cultura é o que ela deveria ser, o que você poderia melhorar? E os outros 93, 94%, a página em branco, o que ela deveria ser? Está claro o exercício? Quatro perguntinhas. O que a empresa existe, o que vão fazer para atingir esse objetivo, onde pretendem chegar.
-00:28:27
-Speaker 2
-Para facilitar aqui, podem pensar onde pretendem chegar em cinco anos e, por fim, quais são os princípios, os valores inegociáveis da empresa para chegar lá. Beleza? Entendido? Sim. Sim? Boa, tá bom. Valeu.
-00:28:59
-Speaker 2
-Pode botar aquela musiquinha também por trás aí para dar uma animada.
-00:33:34
-Speaker 3
-Vamos lá. Tchau.
-00:34:48
-Speaker 3
-Obrigado.
-00:36:15
-Speaker 3
-Você mandou pra mim uma boa. Você mandou? Tá aqui o cara aí. Só o suor? Até agora?
-00:37:56
-Speaker 3
-E aí.
-00:38:51
-Speaker 2
-Foi? Fechou? Deu pra fazer, pessoal? Sim. E aí, alguém quer compartilhar? Posso fazer. Opa. Bora, então. Primeiro aqui e depois... Mas fala também um pouco o que você pensou fazendo esse exercício aqui, Francisco.
-00:39:18
-Speaker 4
-Eu pensei naquilo que a gente... Naquilo que eu penso como o que realmente eu realizo e o que eu quero transparecer e passar pra minha equipe. O que nós gostaríamos e o que a gente gostaria que todos se empenhassem em fazer. Então, eu vou fazer... Tentei resumir aqui. Primeiro a gente escreve um monte de coisa e depois a gente fala muita coisa. Então, o propósito. Trazer segurança.
-00:39:50
-Speaker 4
-Claro. Clareza e estratégia jurídica para riscos, conflitos e decisões elevadas. Missão, resolver problemas jurídicos complexos com profundidade técnica, ética, empatia e estratégia, entregando resultados consistentes e confiança de longo prazo.
-00:40:27
-Speaker 4
-Missão, aliás, perdão, visão, ser um escritório jurídico de referência nacional em soluções estratégicas para conflitos complexos, de excelência, com excelência e atuação humanizada. Valores, rigor, técnico, clareza e transparência, proteger relações e patrimônio, ética e responsabilidade.
-00:41:01
-Speaker 4
-Com visão estratégica.
-00:41:04
-Speaker 2
-Boa, ótimo, hein? Pessoal, Francisco, carneiro de só os advogados, depois dessa identidade organizacional. Obrigado, Francisco. Já está com o microfone aqui? Ótimo.
-00:41:19
-Speaker 5
-Já estou aqui. Qual é o seu nome? Meu nome é Arthur, sou de Recife, tenho uma concessionária de planos de saúde lá. Boa. E aí, como propósito, eu coloquei aqui, descomplicar o acesso à saúde suplementar de pessoas físicas e jurídicas.
-00:41:34
-Speaker 2
-E como é que você chegou nesse propósito aí, Arthur.
-00:41:37
-Speaker 5
-Cara, foi baseado aqui nos exemplos, nos slides ali, porque a minha empresa existe, o que é que de fato eu faço, né, aí trazendo para a missão como eu vou fazer, aí eu peguei os exemplos e, ó, porque é que a minha empresa existe para isso, para descomplicar esse acesso, promover o plano de saúde ali na ponta para pessoas físicas e jurídicas.
-00:41:58
-Speaker 2
-E você acha que você deixar esse propósito claro para todos os teus colaboradores, teus clientes, você acha que isso é muito complexo, isso vai te ajudar, não vai, o que que acontece.
-00:42:10
-Speaker 5
-Eu acho que ajuda, ajuda muito, né, até porque assim, eu aqui pensando em intermediar esse acesso, não, eu quero descomplicar, eu quero trazer, fazer com que isso chegue mais fácil, que ele entenda o que envolve, as variáveis que isso envolve e descomplicar tudo isso para ele na ponta lá.
-00:42:29
-Speaker 3
-Boa.
-00:42:30
-Speaker 5
-A missão, através de uma rede de consultores especializados... Personalização e eficiência de custos, que é o que tanto importa. A visão é nos tornar referência no segmento com atuação nacional, e os valores integridade e respeito, relacionamento e performance.
-00:42:51
-Speaker 2
-Boa. Valeu, obrigado, Arthur.
-00:42:52
-Speaker 5
-Valeu, obrigado. Última.
-00:42:56
-Speaker 6
-Opa, isso. O propósito hoje da Marcas é construir um legado. Como é que você chama esse propósito? Qual que é o seu nome.
-00:43:05
-Speaker 2
-Brenda. Brenda. Já era um negócio que você pensava, estava meio guardadinho lá, mas hoje já está escrito.
-00:43:13
-Speaker 6
-Não, desde quando eu criei a agência. Construí legado perpetuado durante décadas. A missão seria como? É direcionar marcas com clareza e técnica através do branding para trazer diferenciação dentro do mercado. A visão seria tornar... seria, não é. Se tornar a maior agência em expertise dentro do Brand, no Brasil. E os nossos valores, em primeiro lugar, lealdade, ambição, coragem, paixão e comprometimento.
-00:43:50
-Speaker 2
-Valores, não é que todo mundo vai tirar nota 10 da prova, todo mundo vai colocar ética, confiança. Não, cada um já tem, cada empresa já tem seu jeito. Então a empresa da Brenda já está falando mais de lealdade, criatividade, falou não, paixão. Aqui a gente já está falando com o Francisco, rigor, técnica, jurídico. Então cada empresa já vai tendo um pouco da sua identidade. E a beleza desse negócio, de novo, é que os valores, eles não são necessariamente a cultura da empresa.
-00:44:26
-Speaker 2
-Esse é um exercício do que a gente quer que seja. E agora a gente vai fazer um pouquinho de como que a gente pode fazer para, de fato, chegar lá. Bora! Diagnóstico e formalização da cultura. Agora começa a ficar a parte boa, pessoal, de coisa para fazer, né? Vocês não gostam de voltar para casa com um monte de coisa para fazer? Então, agora começa o plano de ação aí, ó. Então, a cultura, de fato, muda.
-00:44:59
-Speaker 2
-Muita gente pergunta, pô, mas dá para mudar a cultura? Dá, dá para mudar a cultura. Bom, dá para mudar tudo, né? Não tudo, mas a grande maioria das coisas dá para mudar. Cultura é uma delas. Boa notícia. Ótima notícia. O que a gente precisa fazer para, de fato, mudar a cultura? Primeiro, declarar onde a gente quer chegar. Beleza, acabamos de fazer isso, né? Check. Feito. Segundo, entender onde que a gente está. Pra gente ver o que a gente tem de espaço de um pro outro, né, do nosso objetivo versus.
-00:45:33
-Speaker 2
-a nossa realidade. A nossa realidade, em geral, ela é bem fácil de descobrir. A não ser que seja uma empresa muito grande, muito complexa, que você não sabe o que tá acontecendo lá no chão de fábrica. Se é uma empresa de até centenas de pessoas, pô, dá pra ter uma boa noção do que tá acontecendo. A gente pode fingir que não tá vendo algumas coisas, ou não tem um nível de granularidade tão grande assim, mas, em geral, a gente tem um bom cheiro do que que tá rolando.
-00:46:06
-Speaker 2
-Se a gente não tiver, tem formas bem provadas de a gente conseguir esse tipo de informação. Por exemplo, pesquisa. Tem um monte de site e ferramenta que fazem pesquisa. Um monte, um monte. Dois. A gente desintermediar o canal de comunicação. Ô Gustavo, como é que eu desintermedio o canal de comunicação? Vai dar uma volta na empresa. Vai marcar um 101 com uma pessoa quatro níveis abaixo de você.
-00:46:37
-Speaker 2
-Vai no happy hour. Sabe como que eu descobri uma fraude do plano de saúde? Ó, fraude do plano de saúde. Na em casa. Primeiro que a gente tava lá no plano de saúde, né? Dois, três anos consecutivos, a Sul América só reajuste 60% por ano, 70% por ano. Aí teve um momento que a gente falou assim, caramba, o que que tá acontecendo? A gente andava pra outro, não, tudo não é uma coisa. Nossa senhora, saúde, aí começamos a culpar o marco. Porra, saúde no Brasil tá foda, não sei o que.
-00:47:08
-Speaker 2
-E a gente nunca entendeu realmente por que que o plano de saúde, por que que o custo tava crescendo tanto. Até um dia que tava eu e a diretora de pessoas da empresa. Tomando uma cervejinha no happy hour da empresa. Suave, não era loucura não, pessoal. Tranquilo. Happy hour, honesto, seis, sete da noite. Veio o fulano, nem lembro quem, claro que lembro. Rafaela Barbosa, da equipe de vendas.
-00:47:40
-Speaker 2
-Baita vendedora, vende pra caramba essa menina. Baita vendedora. Veio recomendar a diretora de pessoas, do meu lado, que ela deveria ir na doutora Olga. Doutora Olga? Doutora Olga era uma dermatologista que estava fazendo uma porrada de procedimento estético, via plano de saúde, que não deveria ser feito. Fez até lipo via plano de saúde.
-00:48:12
-Speaker 2
-Ela ia lá, você ia lá, mas tem gente querendo ir pra doutora Olga aqui depois, já estou sabendo, mas... Mas as pessoas iam lá, davam a senha e o número da carteirinha da Sul América para a doutora Olga, e ela ficava lá. Todo mês ela bilava uma consulta. Até bater o valor da limpa, limpo, não sei, 15 pau, 20 mil. Ah, então deixa aqui. Eu vou botar 20 consultas aqui nos próximos 20 meses. Tudo bem? Tudo bem.
-00:48:43
-Speaker 2
-Um quarto da empresa tinha entrado na doutora Olga. Um quarto. Não é pouco. Não é tipo 5 pessoas foram. Foram tipo 80 pessoas. Estava sem co-participação no plano, né? Estava, depois a gente botou co-participação. Aprendemos, né? Mas estava sem, é isso mesmo. E como que a gente descobriu isso, pessoal? Desintermediando. Então é muito importante você ter esse canal de comunicação. Com a linha de frente do negócio.
-00:49:16
-Speaker 2
-Se você não está na linha de frente hoje, você está próximo de algumas pessoas da linha de frente. E criar um sentimento de confiança com essas pessoas, para a informação chegar em vocês sem filtro. Principalmente quando você está tocando o negócio, você não quer quatro camadas de suavização de problema. Porque senão, você não tem as informações necessárias para tomar a decisão que precisa ser tomada. E isso, nossa, tem muito exemplo disso. Mas aqui, a gente tem que entender o que é de fato.
-00:49:47
-Speaker 2
-o que está acontecendo na empresa. E o último ponto é desenhar um plano de ação. Plano de ação, pessoal, é tão simples quanto. Se você tem uma empresa que, não sei, vai estar faturando um milhão. Você vai botar como meta do ano seguinte faturar um bilhão? Não vai. Se você tem um... não sei... Um churn de 40% por ano, você vai botar uma meta de 2% no próximo ano?
-00:50:19
-Speaker 2
-Não vai. Você vai pensar o que você precisa fazer ano a ano, porque não adianta botar um monte de meta que você não vai atingir, só vai criar frustração. Certo? A meta precisa ser agressiva, você tem que quase não atingir, ou você atinge por pouco ou não atinge por pouco, mas você quer de fato ter alguma coisa que seja possível. Aqui é a mesma coisa. E o ideal é a gente começar a implementar elementos culturais nas ferramentas que vocês.
-00:50:49
-Speaker 2
-já usam na empresa de vocês. Ah, a empresa tem OKR, bota elemento cultural no OKR. Ah, tem meta anual com... Com bônus agressivo relacionado à meta anual. Coloca ponto cultural lá também. Então aqui, a gente não precisa reinventar a roda, criar um monte de coisa, implementar o framework de não sei o que. Não. Pega pontos, as ferramentas que vocês já usam na empresa de vocês. Só que bota com elementos culturais lá também. Como você vai botar os elementos culturais?
-00:51:20
-Speaker 2
-Baseado nesse gap que vocês têm. Aqui a gente tem a nossa identidade organizacional, em específico nossos valores. Aqui a gente tem o que a empresa faz hoje. E normalmente você tem um universo aqui. Aqueles 19% lá que a gente falou no começo, então aqui teria 81% das pessoas estão descasadas. E aqui na sala, 93, 94% das pessoas estão em realidades diferentes. Como você vai fechar esse gap?
-00:51:52
-Speaker 2
-Você não vai fechar esse gap em meses. Talvez nem em um ano, nem em dois. Talvez em cinco. E tudo bem, mas cada ano que passa, cada mês que passa, a gente tem que ter um plano específico para isso e a gente tem metas específicas para isso. E agora a gente vai falar um pouquinho dessas ferramentas. Mas ter uma cabeça de diagnóstico, uma cabeça de temos um problema, precisamos pensar em uma solução, é o primeiro passo para a gente de fato conseguir construir um plano de ação.
-00:52:22
-Speaker 2
-E por que ter um plano de ação, formalizar esse plano de ação é importante? Por um elemento muito simples aqui, pessoal, se a gente tem uma empresa de 3, 4 pessoas, imagina, estamos começando a empresa aqui, estamos começando lá o dia 4, pô, 4, 5 pessoas lá, tá o Thales, o Alfredo, o Nardão, papapá, pô, você sabe para almoçar, aí trouxe a primeira pessoa, veio o Tony, etc., pô. Tem quatro, cinco pessoas, você almoça com essas pessoas todo dia. Você fica melhor amigo dessas pessoas. Você sabe o nome do filho, o nome do tio, o nome do papagaio, do periquito.
-00:52:56
-Speaker 2
-Você sabe se a pessoa está feliz, sabe se a pessoa está triste, sabe se a pessoa está motivada, sabe se ela está de ressaca. Você sabe tudo disso. Você almoça com ela todo dia. Aí a empresa cresce. Aí você traz mais uma, traz mais outra, traz um coordenador, traz um analista. Você já não está tão próximo assim. Você chega numa linha aqui de dez pessoas no seu time. A possibilidade de comunicações entre essas pessoas é de dez vezes nove dividido por duas, 45 linhas. Se você tem cem pessoas no seu time, você tem 450 pontos de comunicação.
-00:53:30
-Speaker 2
-Se você não controla a comunicação para o seu time... Você não tem como ter controle absolutamente nenhum disso. Se você não tem um planejamento, ah, quero comunicar A, quero comunicar B, quero ter o ritual X, quero ter o ritual Y, quero ter a reunião Z, as informações que vocês desenharam aqui, o plano de ação que vocês desenharam aqui, ele não consegue ser transmitido para o resto da companhia. Não consegue. Talvez ele vai ser transmitido para um pequeno grupo que está ali próximo.
-00:54:04
-Speaker 2
-Mas o objetivo aqui é que a companhia, de fato, tenha uma transformação cultural. Para isso, a gente precisa ter um plano de ação bem definido. Está claro isso, pessoal? 100%? Sim.
-00:54:22
-Speaker 3
-Boa.
-00:54:23
-Speaker 2
-E agora a gente vai entrar na parte boa da aula. Na parte boa da aula que é quais são as ferramentas, de fato, para a gente conseguir, implementar essa mudança. É possível implementar essa mudança? É possível fazer. Tem quatro grandes ferramentas que a gente usa para fazer uma mudança cultural. E, na verdade, são as quatro principais formas também que uma cultura é desenhada,
-00:54:55
-Speaker 2
-seja ela intencionalmente ou não intencional. Primeiro ponto, as ações da liderança. O que quero dizer com isso? É o que a liderança faz. A liderança chega cedo ou chega atrasada? Vai embora tarde, fala palavrão, não fala, bota o pé em cima da mesa, beleza, trata bem o cliente, presta atenção nos detalhes, não presta. Como que o CEO, a CEO, o diretor X, Y, Z, como que o grupinho que manda ali age?
-00:55:30
-Speaker 2
-Essa, se não a principal, certamente é a segunda forma mais eficaz de você mudar o comportamento de uma empresa, a cultura de uma empresa. Segundo ponto, práticas do dia a dia. Lembra do iceberg? O que as pessoas fazem? Como que elas tomam decisão? Como que elas se comportam? Não estou falando de liderança, estou falando da empresa. Como são as reuniões?
-00:56:02
-Speaker 2
-É uma reunião, em geral, com eficiente, com agenda? Ou é bate-papo? Você deixa para discutir o tema da reunião nos últimos cinco minutos? Você faz a reunião para marcar a reunião? Ou você já vai super preparado? Como que a empresa se comporta, pessoal? Pessoal, três, as histórias e símbolos. Isso é muito legal, né? Sempre tem aquela história, pô, lembra daquele ano que não sei o que, 31 de dezembro, cara, na festa de Réveillon, saiu, ligou pro cliente, fechou, rodou DocuSign, assinou, bateu uma meta e todo mundo comemorou,
-00:56:37
-Speaker 2
-essas coisas assim. Ou então, pô, não, quando, não sei, estourou o cano da fábrica e foi todo mundo, voltou lá pra pegar o baldinho e tirava. As histórias que o pessoal conta, e toda empresa tem as suas próprias histórias. Quais são as histórias lá da Conexão Talento? Três anos atrás, o pessoal conta até hoje. Isso são pontos que continuam moldando a cultura. E por fim, os prêmios e penalizações. É um impacto no bolso.
-00:57:07
-Speaker 2
-Molda a cultura pra caramba esse negócio. Você promove o porquê. Você dá um bônus porquê. Você demitiu fulano de tal porquê. Os motivos, todo mundo sabe. E eles vão influenciando como que as pessoas se comportam. Poxa, se a Juliana, a Evandra e a Maísa foram promovidas por causa do motivo X, pô, eu que não sou povo, ano que vem estou eu lá fazendo o X igualzinho, né? Porque eu sou o próximo da fila.
-00:57:38
-Speaker 2
-Ó, óbvio. Por outro lado, se o, não sei, se o João, o Joaquim e o Antônio fizeram A e foram demitidos, pô, eu como vou fazer A agora, né? Ou se eu fizer, ninguém vai saber, né? É isso. Super mal da cultura, nesse ponto. Ferramentas super fáceis de executar. Vamos tentar pensar um pouco agora na prática. Poxa, eu quero aqui fazer com que a, não sei, a cultura seja mais colaborativa.
-00:58:16
-Speaker 2
-Temos um problema de colaboração. Ações da liderança. O que eu posso fazer no dia a dia? Ó, perfeito. Lá em prêmios e penalizações pode ser uma boa decisão. Ações da liderança eu vou ser super colaborativo. Visivelmente colaborativo. No meio da reunião aqui eu vou fazer alguma coisa que o pessoal fala assim.
-00:58:46
-Speaker 2
-caraca, Gustavo, é de fato colaborativo. Vou ajudar uma pessoa do lado, deixar todo mundo ver. Vou, sabe, intencionalmente, tomar decisões que ajudem a empresa a ir em uma determinada direção. Fazem a menor diferença, no meu salário, no meu bônus, no meu nada. Mas eu vou fazer questão de ir lá e ajudar. Práticas do dia a dia?
-00:59:17
-Speaker 2
-Que mudanças nos processos eu consigo fazer? Para o time ser mais colaborativo. Envolver diferentes pessoas no processo de onboarding. Criar, regras, boas práticas. Formalizar isso dentro da equipe. Histórias e símbolos. Poxa, eu posso pegar um exemplo. Não sei do trimestre passado. Um exemplo aqui que o Davi foi muito bem. Mega colaborativo. Um assunto que fosse.
-00:59:49
-Speaker 2
-Vou pegar lá na minha próxima reunião com a empresa inteira. Estou apresentando os resultados. Crescemos X, reduzimos o custo. Todo mundo feliz, todo mundo puto. Não importa. E pessoal, agora vou falar aqui um tema tão importante quanto que é Ah, vocês viram o que o Davi fez? Por Davi, caramba! Ele, pô, ficou até altas horas outro dia, porque o time XYZ precisava entender o que aconteceu três anos atrás. Ele foi lá, pegou todo o histórico, explicou pra eles, não sei o que, papapá, e pô, isso ajudou o time do agro a conseguir um bom contrato.
-01:00:23
-Speaker 2
-Pô, aí galera, parabéns pro Davi aí, ó. E cria já uma história, um símbolo, um ritual, uma comunicação. E por fim, o que a Evandra, né? A Evandra falou, pô, quero que o time seja colaborativo, então vou fazer o seguinte. Ou todo mundo tem bônus ou ninguém tem nada. Ponto. Acabou a história. Que é um negócio mais extremo, se tiver uma pessoa na equipe que não tiver batido a meta, ninguém bateu a meta. Não importa, tem cinco pessoas. Um bateu 150, outro 140, outro 130, outro 120.
-01:00:56
-Speaker 2
-Se um tiver batido 99, não tem bônus pra esse time.
-01:01:00
-Speaker 1
-Nossa.
-01:01:01
-Speaker 2
-O que vai acontecer.
-01:01:01
-Speaker 1
-Guerra.
-01:01:03
-Speaker 2
-E vai todo mundo tentar ajudar o cara de 99. E assim vai ferrar todo mundo. Passa pra cá, passa pra cá, deixa que eu ligo, vamos lá. Tem vários pontos, pessoal. As ferramentas estão aí. A gente aprende aqui no Traction, chat de PT, Google, tem um monte de coisa. O que não falta é ideia e coisa pra gente fazer. O que precisa? Intencionalidade e um plano de ação.
-01:01:35
-Speaker 2
-Se a gente não priorizar isso, a gente não tira do papel. Nesse exemplo que você deu, tem cinco pessoas, quatro, mas não é nenhuma da elas. Fala aí, mano. Foi um exemplo que eu acabei de inventar, mas bora, bora, vamos mergulhar nele. Qual que é o seu nome? Felipe. Felipe, Felipe, da onde você é, Felipe? Curitiba.
-01:01:57
-Speaker 7
-Boa, bora, manda. Nesse exemplo que você deu... E acontece, não é um exemplo da tua cabeça? Quatro pessoas estão acima da meta, uma pessoa está abaixo. O problema não é a pessoa? Ela não vai fazer parte da tua cultura nunca.
-01:02:15
-Speaker 2
-Não sei, depende. A pessoa bateu 99%? Não vou falar que se a pessoa bateu 10%, sim. Com certeza. Mas tem casos e casos, Felipe. Vamos pensar na seguinte ilustração aqui. A gente tem um time, cinco pessoas, meta agressivaça. Um bateu 140, outro bateu 130, outro bateu 120, outro bateu 90% da meta. Lembrando, meta agressiva. Não necessariamente se a pessoa de 90% é ruim.
-01:02:47
-Speaker 2
-90% de uma meta super agressiva, talvez seja um bom resultado. Como que foi essa pessoa nos meses anteriores? Ela bateu 100, 120, 130? Não vou crucificar uma pessoa que bateu 90% no mês. Nesse cenário, cara, eu apostaria minhas fichas que bateu lá de 24, 25, um bateu 100%, outro bateu 105, outro bateu 102, e um tá com 80%, que tá os outros 3, 4 ajudando. Eu já vi isso.
-01:03:17
-Speaker 2
-Ah, não. Então, se você tá indo pra uma outra linha, pô, tem 4 pessoas que bateram 130, 120%, e tem um que bateu 20, pô, aí esse problema é da situação, com certeza. 20% por 2, 3 meses seguidos. Aí, mas o que vai acontecer? Você vai ver os outros 4 falando, cara, porra, demite essa pessoa lá, pô. Demite, porque tá prejudicando todo mundo aqui. E antes disso, muito possivelmente, os 4 já tentaram ajudar de alguma maneira. Mas, assim, aqui, cada iniciativa é num caso diferente,
-01:03:48
-Speaker 2
-cada empresa tem sua particularidade. Por isso que é importante, Felipe, a gente ter, cara, um ferramental. Não existe um negócio, sabe? Existe o termo one size fits all. Não existe isso. Não existe, tipo, uma boa prática vai fazer a diferença em todas as empresas. Vão ter empresas, que o exemplo lá da Ivanda vai funcionar mais, prêmios e penalizações. Vão ter outras que vai ser mais a história. Vão ter outras que vai ser a ação da liderança. Pô, o pessoal tá lá porque é inspirado por aquela pessoa. Se a pessoa, poxa, todo dia vem de, não sei, calça khaki e camisa preta, todo mundo vem de calça khaki e camisa preta.
-01:04:24
-Speaker 2
-Se, poxa, todo mundo vota no PT, cara, só vai vir gente votar no PT. Não importa, o exemplo que for, sabe? Você tem empresas que a liderança influencia mais, você tem empresas que prêmios e penalizações influenciam mais, você vai pro BTG, cara. BTG, poxa, prêmio e penalização funciona super bem. Super bem. Mercado financeiro como um todo. Então, importante, Felipe, tenha as ferramentas na sua mão, saiba qual delas você deveria usar em qual momento,
-01:04:55
-Speaker 2
-e claro, né, não vai tentar usar todas, dar um tiro de canhão ao mesmo tempo, complicar pra caramba o negócio, tem que sempre ter um pouco de bom senso aqui pra saber, sabe, a dose do remédio.
-01:05:09
-Speaker 1
-Tem uma questão.
-01:05:10
-Speaker 2
-Uva, tem sim, deixa eu pegar ali pra você, Henrique, que aí eu... Valeu, Felipe, volto pra Curitiba hoje? Amanhã.
-01:05:21
-Speaker 1
-Boa, boa viagem. Gustavo, é... Henrique, né? Isso, Henrique. Eu tenho uma situação na minha empresa que acho que envolve liderança, por isso que eu queria fazer essa pergunta agora. Eu tenho uma pessoa que é líder de uma área, e eu apelidei ela entre comigo e com os meus pais, que são os donos da empresa, que ela é Romário. Faz gol pra caralho, mas é ruim de treinar. Se não gosta de treinar, não é uma gestora inspiradora, como você coloca aqui, não.
-01:05:55
-Speaker 1
-segue ritos e processos. Se eu botar ela para fazer um evento de um milhão de pessoas, ela vai entregar, a qualquer custo vai entregar. Só que assim, eu tenho um desafio com ela de, vou chamar de corporativismo, como é que ela consegue seguir um pouco mais de ritos e processos, corporativismo, fazer gestão de pessoas. E o grande desafio que a gente tem nesse ano é, o que que eu faço com essa pessoa? Porque é uma pessoa que faz, segura boa parte do resultado, só que é o Romário, não é.
-01:06:26
-Speaker 1
-a de treinar.
-01:06:26
-Speaker 2
-Ó, teu exemplo foi até bom cara, você podia ter falado de mundo, seria até pior, né.
-01:06:30
-Speaker 1
-É, pois é.
-01:06:33
-Speaker 2
-Eu não vou te responder agora Henrique, porque a gente vai passar por exatamente essa situação, daqui a uns 15 minutos. Tá bom. E a gente aborda esse conceito e se eu não tiver te respondido, volta e aí para a gente começar a mentoria. A gente mergulha mais no teu caso, especialmente, tá bom.
-01:06:49
-Speaker 1
-Obrigado.
-01:06:49
-Speaker 2
-E pra fechar essa parte de ferramentas, pessoal, o que a gente combinou? Vamos tentar dar o tiro de canhão, como a gente tava falando lá com o Felipe. Vamos escolher aqui, o que é mais importante agora nesse momento? Ah, vamos fazer um playbook, vamos deixar os valores de maneira mais clara, vamos mudar um pouco esse ritual, aquele ritual. Ah, não, as práticas do dia a dia estão fazendo mais sentido, menos sentido. Poxa, vamos falar de cases, que a gente tomou aqui de decisão no passado,
-01:07:23
-Speaker 2
-ou que a gente vai tomar no futuro. O objetivo agora, pessoal, e a gente vai traduzir isso pra um exercício bem rapidinho, é todas essas ferramentas que a gente tem, vamos pensar em três valores só, e pra cada um desses valores, um plano de ação, uma prática. Nesse valor aqui, a gente vai voltar agora, na semana que vem, 22 de segunda, amanhã, e a gente vai fazer essa prática aqui,
-01:07:53
-Speaker 2
-esse plano de ação, essa atividade. Simples, três valores, como que a gente vai atacar cada um desses valores, do ponto de vista de sair de onde a gente está para ir para o lugar que a gente quer chegar. Ficou claro ou não? Então a gente volta aqui, para essa parte, a gente tem a nossa identidade organizacional e os nossos valores. A gente tem o que a empresa é hoje.
-01:08:23
-Speaker 2
-Vamos pegar três exemplos que a gente quer mudar, e uma atividadezinha para cada um deles. Bem rapidinho, a gente tem cinco minutos no total para isso. A gente passa dois minutos. Vai. Três minutos escrevendo e dois minutos compartilhando em grupo de três, quatro pessoas. Gustavo, a gente consegue botar um cronômetro aqui de três minutos? Obrigado.
-01:12:23
-Speaker 3
-E aí, deu o que fazer?
-01:12:58
-Speaker 3
-E aí, bora, pessoal.
-01:13:05
-Speaker 2
-Alguém quer compartilhar aí algum ponto que vale? Opa! Qual que é o seu nome? Eu sou o Felipe. Felipe, bora Felipe.
-01:13:19
-Speaker 8
-Vou compartilhar aqui a questão da liderança. Opa, pessoal, bora aí. Eu tenho cinco setores lá de linha de produção, cada setor tem uma média de sete a oito pessoas. Cada setor tem o seu gerente, né? Mas, abaixo do gerente eu quero criar líderes, aquele que sempre dá o seu melhor, aquele que passa do horário, aquele que se importa, dá esse título a ele de liderança. E caso ele erre, a gente já dá a punição e passar a liderança pra outra pessoa.
-01:13:52
-Speaker 8
-A gente vai se guiar de cor, ele apontar os erros e deixar ele em uma zona de risco, né? De perder essa liderança. Claro, ele lida, ele vai ganhar algumas vantagens, né? Pode ser folgas, porque deixando a produção mais organizada, tudo mais em ponto, a gente consegue fazer essa premiação pra ele.
-01:14:13
-Speaker 2
-E qual que é, o que que muda aí? Qual que é o plano de ação nesse caso.
-01:14:16
-Speaker 8
-O plano de ação é, a gente trabalha muito em cima do prazo, né? A empresa de print, a gente recebe muitos pedidos de emergência. Então é o prazo de entrega, a produção, o produto, o material lá, e a questão da qualidade também.
-01:14:32
-Speaker 2
-Esses aí são, práticas que você vai fazer em relação à qualidade que você já faz hoje ou não.
-01:14:40
-Speaker 8
-Faço, mas é pouco. Vou centralizar mais agora.
-01:14:44
-Speaker 2
-Então tem um plano de ação claro aí já. Obrigado. Obrigado por compartilhar, Felipe. Alguém? Algum diferente? Nada? Opa! Ah, de... Bora! Você que tá com o meu telefone, depois a gente vai na de branco aqui? Tá.
-01:15:07
-Speaker 9
-Eu sou a Marcela, sou sócia da Escola do Prêmio, a gente é uma escola de organização financeira para pessoas físicas. A gente tem um produto digital por assinatura anual. E a gente tem uma cultura bem diferente das organizações financeiras no geral. Então, alguns dos nossos valores são lá, três valores e três ações que a gente faz no dia a dia. O primeiro é previsibilidade, então o nosso produto é como se fosse um fluxo de caixa para empresas, mas para pessoa física. Então, o objetivo é qualquer coisa que ela comprar, ela consegue saber o que vai acontecer com o saldo dela no mês e nos próximos 12 meses. Então, a gente tem isso de previsibilidade, tanto para o nosso produto, quanto na nossa empresa mesmo.
-01:15:38
-Speaker 9
-A gente foca muito em previsibilidade, então a gente sempre contrata advogados pensando sempre na prevenção. Então, é um valor muito forte no nosso interno e externo que reflete no cliente. Outro valor nosso é paz, então a gente sempre fala de sobrar paz. Então o objetivo da gente, do nosso produto, é fazer com que as pessoas aprendam a fazer sobrar dinheiro para ter paz, porque a gente sabe que quando você não tem dinheiro você tem dor de cabeça, você deixa de realizar seus sonhos. Então o cliente sabe disso, está logo na home do nosso site, é fazer sobrar dinheiro para ter paz. E dentro da cultura da empresa a gente tem um work-life balance muito equilibrado, então.
-01:16:11
-Speaker 9
-as pessoas sempre valorizam isso, a gente é uma empresa muito equilibrada em relação à qualidade de vida dos nossos funcionários. E em relação ao terceiro valor é segurança, a gente incentiva que nossos clientes tenham pelo menos 12 meses de reserva de emergência, justamente para ter paz, e a nossa empresa também tem isso, 12 meses de reserva de emergência no nosso site.
-01:16:26
-Speaker 2
-E o que vocês precisam fazer de diferente aí, tem alguma coisa que você vai fazer diferente do que você fazia? Não sei, eu achei que era para dar um exemplo do que a gente já faz, mas se quiser me dar uma dica, sou para você. Olha, vamos falar disso na mentoria que a gente mergulha um pouco mais no seu caso. Marcela, né? Marcela.
-01:16:43
-Speaker 10
-Oi, boa tarde, meu nome é Simone, da empresa Mundo Hidráulico. Eu coloquei três valores o seguinte, autoresponsabilidade, aí como prática, assumir o erro sem rodeios, propondo correções. Outro valor, foco no cliente, como prática, tomar decisões com a seguinte pergunta, o que isso agrega para o cliente? E o outro valor, liderança pelo exemplo, como prática, agir sempre de acordo com o que diz a cultura.
-01:17:11
-Speaker 2
-Super claro, direto ao ponto, né? Vocês já executam isso no dia a dia.
-01:17:17
-Speaker 10
-Sim, estamos tentando, a gente já está numa fase da cultura de implantação, a cultura já está desenhada, estamos agora na fase de implantação e vendo as correções que tem que fazer, porque já entendemos o quanto a cultura, ela... E dessas ferramentas aqui, o que dá para fazer para acelerar essa implementação? Maravilhas as ferramentas, é voltar nisso aí e ver assim, ponto a ponto, o que a gente tem que estar fazendo já, mas o que ainda temos que melhorar.
-01:17:46
-Speaker 2
-E Marcelo, essas três práticas suas ali são as principais, os três valores principais ali. Por isso que é bom a gente pensar sempre em três, três, dois, cinco, que a gente sai um pouco daquele negócio de, aquela lista interminável de atividades e foca realmente nas que são mais prioritárias. E aí pessoal, entrando na parte aqui agora um pouco mais de liderança, como que a gente pode usar liderança em gestão de pessoas a nosso favor?
-01:18:20
-Speaker 2
-A fazer com que a transformação cultural ela seja mais fácil, que a gente tenha mais eficiência e que a gente consiga ter melhores líderes aqui, que foram pontos que foram levantados antes. Acho que o primeiro é bom a gente parar e dar uma respirada e pensar, né? Poxa, quais são as três coisas que acontecem naturalmente na empresa? A gente não tem processo, não tem liderança, não tem... É isso. Confusão, atrito, baixa performance, o resto tudo a gente precisa de liderança e gestão de pessoas.
-01:18:59
-Speaker 2
-Se a gente não tem as pessoas certas nos lugares certos, se a gente não tem os valores alinhados com o que a gente quer, se a gente não tem a quantidade de pessoas que a gente precisa ter, é uma dessas três coisas, ou normalmente as três coisas que acontecem. E eu gosto de voltar aqui um pouco. Quando eu estava lá em Boston, falava-se muito, muito, muito de liderança. A missão da escola era educar líderes que vão transformar o mundo.
-01:19:35
-Speaker 2
-Da mesma forma, né, que a gente pensa, pô, o G4 tem a visão deles aqui, um milhão de empregos, né, em todo lugar que você vai, toda palestra do reitor, o que começava, as pessoas começavam. A missão de Harvard Business School é educar líderes que vão transformar o mundo. Então isso, você via refletido nas aulas, no processo de admissão, basicamente todas as áreas do marketing da escola,
-01:20:05
-Speaker 2
-nas doações, nas pesquisas, tudo que a escola fazia tinha um viés muito grande em liderança. Por quê? Porque na visão deles era a melhor forma de você conseguir fazer uma transformação. Não é você impondo um negócio, jogando dinheiro, não. É você transformando líderes que vão transformar outros líderes, que vão transformar outros líderes, e assim você tem um efeito muito significativo composto ao longo do tempo.
-01:20:36
-Speaker 2
+Mentoria: Cultura e Liderança
+
+A ideia hoje é a gente tentar fazer com que esses temas sejam o mais aplicáveis possível para o negócio de vocês. A gente vai passar por alguns conteúdos talvez mais conceituais, mas a ideia é a gente de fato aplicar nos negócios, que é por isso que vocês estão aqui, obviamente.
+
+Minha Apresentação e Trajetória
+
+Sou sócio-fundador da Canoa Capital, uma gestora de investimentos. A gente compra empresas que têm, na média, faturamento de 50 a 150 milhões de reais. Tipicamente são empresas boas, que estão crescendo, que têm seus desafios, mas que estão bem posicionadas para eles. Normalmente, têm alguma questão societária, de governança, ou falta de sucessão. A gente compra essas empresas, ajusta uma coisa ou outra na gestão e toca o negócio. Isso que eu faço hoje, 99% do meu tempo. De vez em quando venho aqui no G4 e passo uma tarde, um dia com vocês, falando de temas como liderança, cultura, e também faço uma outra aula de gestão financeira e participo como mentor no Gestão e Estratégia, que é o programa presencial.
+
+Antes da Canoa, trabalhei num outro fundo grande aqui no Brasil, que também compra empresas, mas de diferentes formatos. Antes disso, e a maior parte da minha vida, foi tocando negócio, começando, liderando, passando perrengue, barriga no balcão. Isso é o que eu fiz 80, 90% do meu tempo profissional.
+
+Sou do Rio, estudei engenharia na UFRJ. Logo no primeiro ano, no segundo, já percebi que não queria engenharia, mas baixei a cabeça e sobrevivi. Depois vim trabalhar em consultoria aqui em São Paulo, mas logo no começo da carreira percebi que queria empreender. Foi assim que conheci o Thales, o Vini e o Marcinho. Eles estavam fundando a Easy Taxi e buscando duas outras pessoas para tocar o negócio com eles, o Denis e eu. Entramos com uma ou duas semanas de diferença e passamos todo esse tempo lá juntos. Isso foi em 2012. Em 2014, o Thales saiu da operação, e depois quem tocou o negócio até a venda fomos eu e o Denis. Foi uma experiência super legal. O Denis tinha o papel de CEO e olhava muito da porta para fora, falava com investidores, estratégia, tecnologia, relações públicas. Da porta para dentro, quem estava tocando o negócio era eu. Para mim foi um baita desafio, porque com 25 anos eu tinha 1.100, 1.200 pessoas no meu time, não tinha estudado nada de administração de empresas. Não foi engenharia que me ensinou isso, cálculo 4, teorema de Laplace, nada a ver, muito menos a UFRJ, que não tinha nenhuma pegada com liderança de negócios.
+
+Muito do que a gente fez lá na Easy foi com base no bom senso, na cultura e muita coragem. E um pouco de ingenuidade e sem noção também, porque em determinado momento a gente estava lançando o negócio para competir com o chinês na China, e não tinha nenhum chinês, ninguém falava nada de chinês no time. Esse era o tipo de decisão que a gente tomou. Mas, no final das contas, foi uma empresa que a gente vendeu por um pouco menos de 200 milhões de dólares. Foi uma venda bem legal e com um baita aprendizado ao longo desse tempo. Eu falo que cultura foi importante porque, no intervalo de 18 meses, a gente abriu operação em 20 países. É mais do que abrir operação em um país por mês. E abrir operação é... Eu fiz isso em uns 12, 13 países. Pegava o avião, a mochilinha, chegava no lugar, procurava uma gráfica, imprimia o flyer. A gente pensava, onde é que vai estar um posto de gasolina? Buscava um posto de gasolina. Tentava negociar com o dono do posto de gasolina, dois, três lugares, escolhia o melhor e começava a falar com os taxistas. E aí você ia descobrindo as coisas. Você descobria coisas como, no Peru, não existe taxímetro. Eu não fazia a menor ideia, não sabia nem que existia. O táxi podia existir sem taxímetro, não sabia. É uma realidade. Pessoas, para pedir táxi no Peru, paravam na rua, fazendo sinal de táxi, até alguém que, de fato, trabalhasse como táxi passasse e parasse. Aí você tentava uma pessoa, a pessoa, não, não tem nada a ver. Outra também, nada a ver. Aí um quarto o cara para e fala, pô, vai para onde? Vou para Miraflores, vou para Pinheiros. Quanto que custa? 15? Quanto? Não, 15 não, tá muito caro. Pago 13? Eles negociavam, quando estava todo mundo atrás parado e buzinando. A gente pegava realidades como essa, até realidades como a Coreia do Sul, que era um país ultra tecnológico. A privada dos caras tinha uns 30 botões. Tinha botão que eu não queria nem apertar. E assim, é a realidade dos caras. A gente precisava navegar essas diferenças com times sêniores em cada lugar, com regras de impostos financeiros, e fazer uma série de outras questões em cada um dos lugares e ver como você conectava isso tudo na cultura. Não foi no processo financeiro, não foi no processo de administração de empresas. A gente trazia pessoas que tinham muito senso de dono, que trabalhavam como se de fato eles fossem donos do negócio. A gente trazia pessoas que tomavam decisão muito rápido. A gente não podia esperar. Às vezes estava pegando fogo em algum lugar. Podia esperar, pô, mas eu fico diferente, ah, mas a ligação, ah, mas não sei quem está no avião. E uma série de outros pontos culturais que a gente vai abordar aqui.
+
+Depois da venda da Easy, fui fazer um MBA. Estava com muita vontade de estudar administração de empresas, e para mim uma das coisas que foram mais transformadoras na minha vida foi ter conseguido passar para estudar em Harvard. Isso para mim foi uma loucura, um sonho se tornando realidade, que não era minha realidade. Na minha família ninguém tinha estudado fora, minha mãe era vendedora de loja de roupa, tinha uma vida ali de classe média, funcionava bem e tudo mais, mas um negócio completamente surreal. Lá comecei a aprender mais sobre diferentes negócios, liderança, diferentes indústrias, conheci sobre investimentos. Não conhecia nada da Faria Lima, hoje já consigo ter uma boa noção de como que funciona o fluxo do dinheiro, o que que investe aqui, o que que investe lá, quais são os incentivos, o que que acontece. Foi tudo isso, estudando dois anos lá em Boston, que de fato abriram a minha cabeça. Depois, ainda continuei trabalhando em tecnologia por um tempo, fui trabalhar numa startup na Alemanha, depois voltei para o Brasil, comecei um novo negócio, chamada Em Casa, no mercado imobiliário. Depois de cinco, seis anos tocando esse negócio como CEO, vendi parte das minhas ações, passei o bastão para um outro cara que começou o negócio comigo, que toca o negócio até hoje, e fui fazer investimentos, que é o que venho fazendo nos últimos quatro anos. Isso é um pouquinho de mim, vou tentar fazer alguns paralelos, alguns aprendizados que tive nesses lugares.
+
+A ideia daqui hoje é a gente aprofundar em três principais pontos: dois relacionados à cultura e um relacionado à liderança e gestão de pessoas. Por que esses pontos? Porque esses pontos foram as principais dores levantadas por alunos como vocês aqui do Traction. Então a gente tem uma aula aqui hoje muito focada em endereçar esses pontos. E se tiver alguma questão que a gente não tenha abordado, a gente vai ter uma hora de mentoria no final, que é uma dinâmica de perguntas e respostas. E aí a gente consegue pegar, opa, não falamos tanto desse negócio aqui, vamos falar, ah, não falamos muito de Stock Option em empresa, podemos falar.
+
+1. Como Estruturar uma Cultura
+
+Primeiro ponto, como que a gente estrutura uma cultura? Qual a cultura que a gente quer? Qual é a cultura que a gente quer aqui na empresa? Como que a gente constrói isso? E isso passa muito por um exercício de essência, de propósito. O que a gente quer? Onde a gente quer chegar? Como a gente vai chegar lá? Então a gente vai falar um pouquinho de criar uma cultura. O que é desenhar uma cultura?
+
+Segundo, a gente vai pensar em implementação. Não adianta a gente fazer, desenhar aqui uma cultura, pô, legal, bacana, bonito, vou botar no LinkedIn, compartilhar com todo mundo, mas você olha para trás, realidade completamente diferente. Um exemplo bobo: quando tinha 18 anos, fui trabalhar por três meses num restaurante nos Estados Unidos para aprender inglês. Trabalhava no maior restaurante da cidade, que era num resort de esqui. O restaurante era gigante. Tinha umas 20 pessoas só na cozinha trabalhando, 20, 25. E eu era um dos quatro lavadores de louça, eu e mais três brasileiros. E a cultura da cozinha, uma cultura que a galera era muito relaxada. Aquele trabalho de 25 pessoas talvez pudesse ser feito com 10, 12. Mas, a gente ficava lá de boa, batendo papo, lavando e tal, contando da resenha. E era uma cultura de camaradagem, todo mundo, um ajudava o outro. E era curioso porque era o oposto do que eles tinham como os valores da empresa lá do resort de esqui. Lembro muito também de um chefe que a gente tinha, que era o dono, o cara que olhava a cozinha. Ele andava com um bolo de chave aqui do lado. Na hora que o chefe vinha, você escutava antes. Estava todo mundo lavando a louça mais de boa. Na hora que você escutava o barulho da chave, todo mundo começava. Um exemplo de cultura do que é executado quando não tem um chefe olhando, completamente diferente do que tem na parede. No próximo ponto, a gente vai abordar como que a gente consegue juntar essas duas coisas. E a boa notícia é que tem um monte de ferramentazinha, um monte de boa prática, um monte de estudo, para a gente conseguir, de fato, fechar esse gap.
+
+E o terceiro ponto, como contratar e desenvolver líderes e pessoas, para não só garantir que essa cultura seja permeada ao longo do tempo, mas que também isso seja uma das fortalezas da companhia. Então a gente vai passar ponto 1, ponto 2, ponto 3, e aí depois a gente dá um pause e volta depois para a sessão de mentoria.
+
+Definição de Cultura
+
+Cultura nada mais é, pessoal, do que o conjunto de como as pessoas se comportam. O que elas fazem, o que elas pensam, como elas brincam, o que elas usam, enfim, como que grupos se comportam. E no perfil de uma empresa, é basicamente como que as pessoas da empresa agem quando os donos não estão lá olhando. Isso é o que é a cultura de verdade. Muito fácil de resumir. É o que as pessoas fazem quando o chefe não está lá olhando, ou dando bronca no pessoal, puxando a orelha.
+
+E a cultura, ela é uma analogia muito legal, é que ela é tipo um iceberg. E aí em cima, você vê algumas coisinhas. Ah, quais são os benefícios do escritório, tem a política, o organograma. Mas o que mais importa mesmo é a parte de baixo. A parte de baixo é muito mais relevante. São os valores, como que as pessoas tomam decisão, como que o cara é promovido. Por que ele é promovido? Isso é muito mais importante do que o ritual, o vestuário do pessoal. Quais são as motivações? O que tem de viés aqui? É uma empresa que, poxa, só tem homem na liderança? Bom, então é mais fácil você ser líder se você é homem? Não sei. Essas são coisas que não estão escritas. Ninguém vai escrever isso lá em cima. Isso tudo são questões que as pessoas sentem. Ninguém é bobo, todo mundo sabe. É o cafezinho que você vai falar, não está escrito em nenhum lugar. Mas é o que realmente importa. É aqui que move o ponteiro. Não é a parte de cima.
+
+E muita gente pergunta, mas cultura? Cultura é coisa de movimento, cultura é coisa de estatupeiro. Empresa grande não. Empresa grande é performance, meta e entregar o que tem que ser entregue. Mais ou menos. Primeiro vou passar alguns dados, depois a gente fala de alguns exemplos. Aqui são dados não do custal. Três vezes mais crescimento de receita em empresas com cultura forte. Quem disse isso foi rápido. Menos rotatividade, um terço menos rotatividade em empresas que têm um alinhamento cultural. Deloitte. 70% das transformações falham por razões culturais e não por um elemento de processo ou de mercado. 30% de performance explicada pela cultura, 62% mais falhas, 91% dos CEOs veem em cultura tão crítica quanto estratégia. E o mais curioso é que só 19% das pessoas de fato acham que têm a cultura que gostariam.
+
+Você vai fazer o resultado de amanhã. E é uma questão quase que onipresente. A gente está sempre preocupado com o resultado de amanhã. Mas tem que entregar, a meta está lá para ser batida. Se a gente não fizer isso, o nosso competidor vai fazer. O contrato. Sexta-feira a gente estava no gestão estratégia aqui, aí o cara falou assim, acabei de ver aqui que o meu competidor baixou o preço, vou perder essa proposta. É isso. É o nosso dia a dia. Só que se a gente não tira um tempinho do nosso dia a dia para pensar no longo prazo, a cultura vai ser sempre despriorizada.
+
+E por que é coisa de empresa grande? Eu estava assistindo esses dias naquele Netflix, o tempo está sobrando. Estava assistindo o documentário do acidente de Congonhas. Alguém já viu esse documentário? Bom para caramba, hein? Não para ver as pessoas morrendo, mas explicando o passo a passo do negócio, o que está por trás. Gente, acidente de Congonhas, problema 100% cultural. Avião sempre vai ter uma falha ou outra. Mas aí você vê. Por quê? O manifesto da Latam, na época. Primeiro item do manifesto, dos valores da empresa. Primeiro item. Não é o décimo. Primeiro. Lucro acima de tudo. É verdade. Lucro acima... Lucro é importante. Acima de tudo. É um statement muito forte isso. E mostra. Você tem menos treinamento. Você está mais disposto a tomar risco. Só que tem negócio que a gente pode tomar risco. Negócio que a gente não pode tomar risco. Easy Taxi. Perdeu o táxi, pode tomar risco. Direto. Lançando cidade, então, o pessoal vai ficar puto. Não tem problema. A gente pensa nisso um pouquinho para frente. Segurança? Não dá para tomar risco. E tem vários, cara. Lojas Americanas, problema cultural total. Aquele problema lá, aquele rombo de 20 bilhões de reais não apareceu do dia para a noite. É uma cultura com pouca transparência. É uma cultura de você seguir a qualquer custo o que o chefe está falando. É uma cultura do medo. É uma cultura da falta de informação. E aí você vai se agregando. Odebrecht, sempre tem um elemento cultural. Só que cultura, ela tem os maiores impactos no médio ou no longo prazo. Ela não tem no curto prazo. Enfim, importante cultura.
+
+Como Desenhar uma Cultura
+
+Como que a gente desenha uma cultura? Onde que a gente começa? É sempre importante a gente olhar para dentro. Assim como a gente tem a nossa identidade, a gente tem as nossas crenças, a nossa essência, a nossa forma de, a nossa visão de mundo e a empresa é a mesma coisa, a gente precisa pensar nisso. Porque se a gente não pensa nisso, as coisas vão acontecendo e a identidade organizacional vai sendo moldada com as coisas que a gente tolera e não com as coisas que a gente quer. Então é um exercício muito importante, muito provavelmente boa parte de vocês já ouviu o tal do propósito, da visão, da missão, dos valores, mas esse é um ponto de partida muito, muito legal e ele é tão conhecido porque ele é muito eficiente, com um esforço relativamente pequeno a gente consegue ter uma boa noção do que a gente quer como cultura da empresa, o que a gente quer como identidade organizacional. E esses quatro itens, eles basicamente são o porquê, o como, o que, o onde e o porquê a gente faz as coisas.
+
+•
+Propósito: Por que a gente existe? Por que a empresa existe? Por que a distribuidora de fitas adesivas existe? Por que a empresa do fulano de tal existe? Por que a empresa que eu trabalho hoje existe? Por que a empresa que eu criei existe? Por que eu deveria existir? Esse é um ponto muito importante para a gente definir a nossa cultura.
+
+•
+Missão: O que ela representa? O que a gente faz para a gente chegar lá? A gente existe para deixar as pessoas felizes, para reduzir a complexidade, para facilitar a indústria XYZ, para dar mais acesso às pessoas, enfim, o motivo que for. A missão, o que a gente faz para atingir esse propósito? Foco maior na organização, mais interno. Enquanto o propósito é mais aspiracional, a missão é mais um negócio mais concreto. O que a gente faz? Qual é o foco da organização?
+
+•
+Visão: É o mais fácil. Visão é, beleza, tudo bem, a gente tem um propósito, a gente existe por esse motivo, a gente faz isso. Onde que a gente quer chegar, então? A gente quer dominar o mundo ou a gente quer dominar a raça olhada da serra? A gente quer ter um pouquinho de tudo, um impacto muito grande, mas diluído, ou quer ter um impacto muito grande, concentrado? Esse é o tipo de coisa que você pensa quando você faz esse exercício.
+
+•
+Valores: Por fim, os valores. Eu valorizo mais urgência ou qualidade? Transparência ou...? Esse tipo de discussão são os valores da companhia. Representa como que ela é, como que ela quer ser vista, não só para a sociedade do mercado, mas também para os seus próprios funcionários. Quatro coisinhas, propósito, missão, visão e valores. Na hora que a gente junta esses quatro, a gente tem uma boa noção de que é a cultura que a gente quer. Ainda não é exatamente a cultura, se a gente somar um lado e o outro lado, não dá exatamente a cultura. Mas dá uma boa base para a gente chegar lá.
+
+Vou trazer alguns exemplos aqui, para a gente passar por algumas companhias.
+
+•
+Johnson & Johnson: O universo paixão, ciência para impactar profundamente a saúde da humanidade. É o que Johnson & Johnson fala. Essa é a razão, o propósito da Johnson & Johnson.
+
+•
+Walt Disney: Inspirar um mundo melhor por meio das histórias. Olha que bacana.
+
+•
+Nubank: Nubank sempre é usado como exemplo, porque eles nunca falam, ah, não, pô, fazer o cartão de crédito. Não, eles querem reduzir a complexidade, aumentar acesso às pessoas. Esse é o tipo de propósito. Por que a empresa existe? É mais profundo do que exatamente o que você faz ali. E tudo bem, a gente cria um monte de negócio sem propósito no começo. Eu já criei também. Mas esse é um exercício interessante porque, apesar de no dia a dia você estar na batalha, na guerra, na trincheira, etc., você ter muito claro por que você existe te ajuda nos próximos anos aqui para frente. Te ajuda a pensar na cultura que você precisa, nas pessoas que você precisa, como que você vai se comunicar com o mercado, como que você se adapta às tendências. É muito mais fácil você ter controle dessa narrativa.
+
+Missão: Já vai mais para uma linha do foco da organização. O que a gente está fazendo aqui? Então TED, TED Talk. Fomentar a disseminação de grandes ideias. Tesla, transição do mundo para energia sustentável. Google, organizar as informações do mundo. Aqui a gente já fala um pouco mais do que a empresa faz no dia a dia.
+
+Visão: Onde a gente quer chegar nos próximos cinco anos. Em geral, esse é o grande sonho, a grande meta que está, em geral, nas conversas, quando se faz a reunião com a empresa inteira. Então, G4. Quantas pessoas já viram o G4 falando de um milhão de empregos até 2030? Pergunta para qualquer pessoa do G4, a pessoa sabe, na ponta da língua.
+
+Valores: Por fim, os valores são, tipicamente, a forma que você quer fazer as coisas. Walt Disney. Eu quero fazer com qualidade, com inovação, comunidade, narrativa, otimismo. É diferente de uma indústria, que quer fazer com controle de custos. Não pode ter defeito, prazo. Cada uma tem seu formato diferente. E aqui é quando a gente começa a dar o primeiro passinho para a cultura. E os valores, eles só viram cultura na hora que você tem o comportamento repetido. Então não adianta a gente ter os valores se eles não viram comportamento repetido. Por exemplo, a gente quer uma cultura de confiança. Todo mundo quer uma cultura de confiança, né? Quando que esse valor vira cultura, de fato? Quando no dia a dia as pessoas são transparentes umas com as outras. Quando elas conseguem trabalhar em equipe. Então não dá alguma merda e você não fica segurando a informação. Você liga para o supervisor, fala com o fulano que está, tenta resolver. O primeiro é o valor. Confiança. Confiança é um valor. Mas ele só vira cultura na hora que você tem as ações ali no dia a dia. Faz sentido essa distinção? Um negócio é o que a gente quer, outro é o dia a dia da companhia.
+
+Propósito, missão, visão, valores. Para a gente não ficar muito aqui no abstrato, a gente vai fazer um exercício rápido aqui, para a gente botar no papel. A melhor forma é sempre botando no papel. Então a gente vai fazer aqui, a gente vai descrever o que é o propósito, porque não é decorado, não é entrar no site aqui da empresa e ver o que eles anotaram. É o que vocês enxergam, o que vocês gostariam, o que vocês acham que deveria ser. Esquece o que a empresa faz. O que a empresa deveria fazer? 7, 8% das pessoas que acham que a cultura é o que ela deveria ser, o que você poderia melhorar? E os outros 93, 94%, a página em branco, o que ela deveria ser? Quatro perguntinhas: O que a empresa existe, o que vão fazer para atingir esse objetivo, onde pretendem chegar (podem pensar onde pretendem chegar em cinco anos) e, por fim, quais são os princípios, os valores inegociáveis da empresa para chegar lá.
+
+Diagnóstico e Formalização da Cultura
+
+Agora começa a ficar a parte boa, pessoal, de coisa para fazer. A cultura, de fato, muda. Dá para mudar a cultura. Dá para mudar tudo, não tudo, mas a grande maioria das coisas dá para mudar. Cultura é uma delas. Boa notícia. O que a gente precisa fazer para, de fato, mudar a cultura? Primeiro, declarar onde a gente quer chegar. Beleza, acabamos de fazer isso. Segundo, entender onde que a gente está. Para a gente ver o que a gente tem de espaço de um para o outro, do nosso objetivo versus a realidade.
+
+Como que eu descobri uma fraude do plano de saúde? Na Em Casa. Primeiro que a gente estava lá no plano de saúde, dois, três anos consecutivos, a Sul América só reajustava 60% por ano, 70% por ano. Teve um momento que a gente falou assim, caramba, o que que está acontecendo? A gente andava para outro, não, tudo não é uma coisa. Nossa senhora, saúde, aí começamos a culpar o marco. Saúde no Brasil está foda. E a gente nunca entendeu realmente por que o plano de saúde, por que o custo estava crescendo tanto. Até um dia que estava eu e a diretora de pessoas da empresa, tomando uma cervejinha no happy hour da empresa. Suave, não era loucura não, pessoal. Tranquilo. Happy hour, honesto, seis, sete da noite. Veio a Rafaela Barbosa, da equipe de vendas. Baita vendedora. Veio recomendar à diretora de pessoas, do meu lado, que ela deveria ir na doutora Olga. Doutora Olga era uma dermatologista que estava fazendo uma porrada de procedimento estético, via plano de saúde, que não deveria ser feito. Fez até lipo via plano de saúde. As pessoas iam lá, davam a senha e o número da carteirinha da Sul América para a doutora Olga, e ela ficava lá. Todo mês ela bilava uma consulta. Até bater o valor da lipo, 15 mil, 20 mil. Ah, então deixa aqui. Eu vou botar 20 consultas aqui nos próximos 20 meses. Um quarto da empresa tinha entrado na doutora Olga. Não é pouco. Não é tipo 5 pessoas foram. Foram tipo 80 pessoas. Estava sem co-participação no plano, depois a gente botou co-participação. Aprendemos. E como que a gente descobriu isso? Desintermediando. Então é muito importante você ter esse canal de comunicação com a linha de frente do negócio. Se você não está na linha de frente hoje, você está próximo de algumas pessoas da linha de frente. E criar um sentimento de confiança com essas pessoas, para a informação chegar em vocês sem filtro. Principalmente quando você está tocando o negócio, você não quer quatro camadas de suavização de problema. Porque senão, você não tem as informações necessárias para tomar a decisão que precisa ser tomada. E isso, nossa, tem muito exemplo disso. Mas aqui, a gente tem que entender o que é de fato o que está acontecendo na empresa.
+
+E o último ponto é desenhar um plano de ação. Plano de ação, pessoal, é tão simples quanto. Se você tem uma empresa que, não sei, vai estar faturando um milhão. Você vai botar como meta do ano seguinte faturar um bilhão? Não vai. Se você tem um churn de 40% por ano, você vai botar uma meta de 2% no próximo ano? Não vai. Você vai pensar o que você precisa fazer ano a ano, porque não adianta botar um monte de meta que você não vai atingir, só vai criar frustração. A meta precisa ser agressiva, você tem que quase não atingir, ou você atinge por pouco ou não atinge por pouco, mas você quer de fato ter alguma coisa que seja possível. Aqui é a mesma coisa. E o ideal é a gente começar a implementar elementos culturais nas ferramentas que vocês já usam na empresa de vocês. Ah, a empresa tem OKR, bota elemento cultural no OKR. Ah, tem meta anual com bônus agressivo relacionado à meta anual. Coloca ponto cultural lá também. Então aqui, a gente não precisa reinventar a roda, criar um monte de coisa, implementar o framework de não sei o que. Não. Pega as ferramentas que vocês já usam na empresa de vocês. Só que bota com elementos culturais lá também. Como você vai botar os elementos culturais? Baseado nesse gap que vocês têm. Aqui a gente tem a nossa identidade organizacional, em específico nossos valores. Aqui a gente tem o que a empresa faz hoje. E normalmente você tem um universo aqui. Aqueles 19% lá que a gente falou no começo, então aqui teria 81% das pessoas estão descasadas. E aqui na sala, 93, 94% das pessoas estão em realidades diferentes. Como você vai fechar esse gap? Você não vai fechar esse gap em meses. Talvez nem em um ano, nem em dois. Talvez em cinco. E tudo bem, mas cada ano que passa, cada mês que passa, a gente tem que ter um plano específico para isso e a gente tem metas específicas para isso. Mas ter uma cabeça de diagnóstico, uma cabeça de temos um problema, precisamos pensar em uma solução, é o primeiro passo para a gente de fato conseguir construir um plano de ação.
+
+E por que ter um plano de ação, formalizar esse plano de ação é importante? Por um elemento muito simples aqui, pessoal, se a gente tem uma empresa de 3, 4 pessoas, imagina, estamos começando a empresa aqui, estamos começando lá o dia 4, pô, 4, 5 pessoas lá, está o Thales, o Alfredo, o Nardão. Tem quatro, cinco pessoas, você almoça com essas pessoas todo dia. Você fica melhor amigo dessas pessoas. Você sabe o nome do filho, o nome do tio, o nome do papagaio, do periquito. Você sabe se a pessoa está feliz, sabe se a pessoa está triste, sabe se a pessoa está motivada, sabe se ela está de ressaca. Você sabe tudo disso. Você almoça com ela todo dia. Aí a empresa cresce. Aí você traz mais uma, traz mais outra, traz um coordenador, traz um analista. Você já não está tão próximo assim. Você chega numa linha aqui de dez pessoas no seu time. A possibilidade de comunicações entre essas pessoas é de dez vezes nove dividido por duas, 45 linhas. Se você tem cem pessoas no seu time, você tem 450 pontos de comunicação. Se você não controla a comunicação para o seu time, você não tem como ter controle absolutamente nenhum disso. Se você não tem um planejamento, ah, quero comunicar A, quero comunicar B, quero ter o ritual X, quero ter o ritual Y, quero ter a reunião Z, as informações que vocês desenharam aqui, o plano de ação que vocês desenharam aqui, ele não consegue ser transmitido para o resto da companhia. Não consegue. Talvez ele vai ser transmitido para um pequeno grupo que está ali próximo. Mas o objetivo aqui é que a companhia, de fato, tenha uma transformação cultural. Para isso, a gente precisa ter um plano de ação bem definido.
+
+Ferramentas para a Mudança Cultural
+
+E agora a gente vai entrar na parte boa da aula. Na parte boa da aula que é quais são as ferramentas, de fato, para a gente conseguir implementar essa mudança. É possível implementar essa mudança? É possível fazer. Tem quatro grandes ferramentas que a gente usa para fazer uma mudança cultural. E, na verdade, são as quatro principais formas também que uma cultura é desenhada, seja ela intencionalmente ou não intencional.
+
+1.
+As ações da liderança: O que quero dizer com isso? É o que a liderança faz. A liderança chega cedo ou chega atrasada? Vai embora tarde, fala palavrão, não fala, bota o pé em cima da mesa, trata bem o cliente, presta atenção nos detalhes, não presta. Como que o CEO, a CEO, o diretor X, Y, Z, como que o grupinho que manda ali age? Essa, se não a principal, certamente é a segunda forma mais eficaz de você mudar o comportamento de uma empresa, a cultura de uma empresa.
+
+2.
+Práticas do dia a dia: Lembra do iceberg? O que as pessoas fazem? Como que elas tomam decisão? Como que elas se comportam? Não estou falando de liderança, estou falando da empresa. Como são as reuniões? É uma reunião, em geral, eficiente, com agenda? Ou é bate-papo? Você deixa para discutir o tema da reunião nos últimos cinco minutos? Você faz a reunião para marcar a reunião? Ou você já vai super preparado? Como que a empresa se comporta?
+
+3.
+Histórias e símbolos: Isso é muito legal. Sempre tem aquela história, pô, lembra daquele ano que não sei o que, 31 de dezembro, cara, na festa de Réveillon, saiu, ligou para o cliente, fechou, rodou DocuSign, assinou, bateu uma meta e todo mundo comemorou, essas coisas assim. Ou então, pô, não, quando, não sei, estourou o cano da fábrica e foi todo mundo, voltou lá para pegar o baldinho e tirava. As histórias que o pessoal conta, e toda empresa tem as suas próprias histórias. Quais são as histórias lá da Conexão Talento? Três anos atrás, o pessoal conta até hoje. Isso são pontos que continuam moldando a cultura.
+
+4.
+Prêmios e penalizações: É um impacto no bolso. Molda a cultura para caramba esse negócio. Você promove o porquê. Você dá um bônus porquê. Você demitiu fulano de tal porquê. Os motivos, todo mundo sabe. E eles vão influenciando como que as pessoas se comportam. Poxa, se a Juliana, a Evandra e a Maísa foram promovidas por causa do motivo X, pô, eu que não sou povo, ano que vem estou eu lá fazendo o X igualzinho, né? Porque eu sou o próximo da fila. Óbvio. Por outro lado, se o João, o Joaquim e o Antônio fizeram A e foram demitidos, pô, eu como vou fazer A agora, né? Ou se eu fizer, ninguém vai saber, né? É isso. Super mal da cultura, nesse ponto.
+
+Ferramentas super fáceis de executar. Vamos tentar pensar um pouco agora na prática. Poxa, eu quero aqui fazer com que a, não sei, a cultura seja mais colaborativa. Temos um problema de colaboração. Ações da liderança. O que eu posso fazer no dia a dia? Lá em prêmios e penalizações pode ser uma boa decisão. Ações da liderança eu vou ser super colaborativo. Visivelmente colaborativo. No meio da reunião aqui eu vou fazer alguma coisa que o pessoal fala assim, caraca, Gustavo, é de fato colaborativo. Vou ajudar uma pessoa do lado, deixar todo mundo ver. Vou, intencionalmente, tomar decisões que ajudem a empresa a ir em uma determinada direção. Fazem a menor diferença, no meu salário, no meu bônus, no meu nada. Mas eu vou fazer questão de ir lá e ajudar. Práticas do dia a dia? Que mudanças nos processos eu consigo fazer? Para o time ser mais colaborativo. Envolver diferentes pessoas no processo de onboarding. Criar regras, boas práticas. Formalizar isso dentro da equipe. Histórias e símbolos. Poxa, eu posso pegar um exemplo. Não sei do trimestre passado. Um exemplo aqui que o Davi foi muito bem. Mega colaborativo. Um assunto que fosse. Vou pegar lá na minha próxima reunião com a empresa inteira. Estou apresentando os resultados. Crescemos X, reduzimos o custo. Todo mundo feliz, todo mundo puto. Não importa. E pessoal, agora vou falar aqui um tema tão importante quanto que é: Vocês viram o que o Davi fez? Por Davi, caramba! Ele, ficou até altas horas outro dia, porque o time XYZ precisava entender o que aconteceu três anos atrás. Ele foi lá, pegou todo o histórico, explicou para eles, e isso ajudou o time do agro a conseguir um bom contrato. Pô, aí galera, parabéns para o Davi. E cria já uma história, um símbolo, um ritual, uma comunicação. E por fim, o que a Evandra falou, pô, quero que o time seja colaborativo, então vou fazer o seguinte. Ou todo mundo tem bônus ou ninguém tem nada. Ponto. Acabou a história. Que é um negócio mais extremo, se tiver uma pessoa na equipe que não tiver batido a meta, ninguém bateu a meta. Não importa, tem cinco pessoas. Um bateu 150, outro 140, outro 130, outro 120. Se um tiver batido 99, não tem bônus para esse time. E vai todo mundo tentar ajudar o cara de 99. E assim vai ferrar todo mundo. Passa para cá, passa para cá, deixa que eu ligo, vamos lá. Tem vários pontos, pessoal. As ferramentas estão aí. A gente aprende aqui no Traction, chat de PT, Google, tem um monte de coisa. O que não falta é ideia e coisa para a gente fazer. O que precisa? Intencionalidade e um plano de ação. Se a gente não priorizar isso, a gente não tira do papel.
+
+Nesse exemplo que você deu, tem cinco pessoas, quatro, mas não é nenhuma delas. Foi um exemplo que eu acabei de inventar, mas vamos mergulhar nele. Quatro pessoas estão acima da meta, uma pessoa está abaixo. O problema não é a pessoa? Ela não vai fazer parte da tua cultura nunca. Não sei, depende. A pessoa bateu 99%? Não vou falar que se a pessoa bateu 10%, sim. Com certeza. Mas tem casos e casos. Vamos pensar na seguinte ilustração aqui. A gente tem um time, cinco pessoas, meta agressivaça. Um bateu 140, outro bateu 130, outro bateu 120, outro bateu 90% da meta. Lembrando, meta agressiva. Não necessariamente se a pessoa de 90% é ruim. 90% de uma meta super agressiva, talvez seja um bom resultado. Como que foi essa pessoa nos meses anteriores? Ela bateu 100, 120, 130? Não vou crucificar uma pessoa que bateu 90% no mês. Nesse cenário, eu apostaria minhas fichas que bateu lá de 24, 25, um bateu 100%, outro bateu 105, outro bateu 102, e um está com 80%, que está os outros 3, 4 ajudando. Eu já vi isso. Ah, não. Então, se você está indo para uma outra linha, pô, tem 4 pessoas que bateram 130, 120%, e tem um que bateu 20, pô, aí esse problema é da situação, com certeza. 20% por 2, 3 meses seguidos. Aí, mas o que vai acontecer? Você vai ver os outros 4 falando, cara, demite essa pessoa lá. Demite, porque está prejudicando todo mundo aqui. E antes disso, muito possivelmente, os 4 já tentaram ajudar de alguma maneira. Mas, assim, aqui, cada iniciativa é num caso diferente, cada empresa tem sua particularidade. Por isso que é importante a gente ter um ferramental. Não existe um negócio, sabe? Existe o termo one size fits all. Não existe isso. Não existe, tipo, uma boa prática vai fazer a diferença em todas as empresas. Vão ter empresas, que o exemplo lá da Ivanda vai funcionar mais, prêmios e penalizações. Vão ter outras que vai ser mais a história. Vão ter outras que vai ser a ação da liderança. O pessoal está lá porque é inspirado por aquela pessoa. Se a pessoa, todo dia vem de, não sei, calça cáqui e camisa preta, todo mundo vem de calça cáqui e camisa preta. Se, todo mundo vota no PT, cara, só vai vir gente votar no PT. Não importa, o exemplo que for. Você tem empresas que a liderança influencia mais, você tem empresas que prêmios e penalizações influenciam mais, você vai para o BTG. BTG, prêmio e penalização funciona super bem. Mercado financeiro como um todo. Então, importante, tenha as ferramentas na sua mão, saiba qual delas você deveria usar em qual momento.
+
+Para fechar essa parte de ferramentas, o que a gente combinou? Vamos tentar dar o tiro de canhão. Vamos escolher aqui, o que é mais importante agora nesse momento? Ah, vamos fazer um playbook, vamos deixar os valores de maneira mais clara, vamos mudar um pouco esse ritual, aquele ritual. Ah, não, as práticas do dia a dia estão fazendo mais sentido, menos sentido. Poxa, vamos falar de cases, que a gente tomou aqui de decisão no passado, ou que a gente vai tomar no futuro. O objetivo agora é todas essas ferramentas que a gente tem, vamos pensar em três valores só, e para cada um desses valores, um plano de ação, uma prática. Nesse valor aqui, a gente vai voltar agora, na semana que vem, e a gente vai fazer essa prática aqui, esse plano de ação, essa atividade. Simples, três valores, como que a gente vai atacar cada um desses valores, do ponto de vista de sair de onde a gente está para ir para o lugar que a gente quer chegar.
+
+Liderança e Gestão de Pessoas
+
+E agora a gente vai entrar na parte aqui agora um pouco mais de liderança, como que a gente pode usar liderança em gestão de pessoas a nosso favor? A fazer com que a transformação cultural ela seja mais fácil, que a gente tenha mais eficiência e que a gente consiga ter melhores líderes aqui, que foram pontos que foram levantados antes. Acho que o primeiro é bom a gente parar e dar uma respirada e pensar, né? Poxa, quais são as três coisas que acontecem naturalmente na empresa? A gente não tem processo, não tem liderança, não tem... É isso. Confusão, atrito, baixa performance, o resto tudo a gente precisa de liderança e gestão de pessoas. Se a gente não tem as pessoas certas nos lugares certos, se a gente não tem os valores alinhados com o que a gente quer, se a gente não tem a quantidade de pessoas que a gente precisa ter, é uma dessas três coisas, ou normalmente as três coisas que acontecem.
+
+E eu gosto de voltar aqui um pouco. Quando eu estava lá em Boston, falava-se muito, muito, muito de liderança. A missão da escola era educar líderes que vão transformar o mundo. Da mesma forma, que a gente pensa, pô, o G4 tem a visão deles aqui, um milhão de empregos, em todo lugar que você vai, toda palestra do reitor, o que começava, as pessoas começavam. A missão de Harvard Business School é educar líderes que vão transformar o mundo. Então isso, você via refletido nas aulas, no processo de admissão, basicamente todas as áreas do marketing da escola, nas doações, nas pesquisas, tudo que a escola fazia tinha um viés muito grande em liderança. Por quê? Porque na visão deles era a melhor forma de você conseguir fazer uma transformação. Não é você impondo um negócio, jogando dinheiro, não. É você transformando líderes que vão transformar outros líderes, que vão transformar outros líderes, e assim você tem um efeito muito significativo composto ao longo do tempo.
+
 E antes da gente mergulhar e falar assim, legal, liderança é um conceito super, pode ser super abstrato, na prática, o que isso significa? O que é exatamente? Como eu consigo medir? Qual é o indicador? A gente vai falar disso, vou passar só um vídeo de um cara que é uma lenda, e ele fala um pouquinho sobre o que é liderança na visão dele.
-01:21:06
-Speaker 2
-A gente apaga a luz.
-01:21:20
-Speaker 11
-To be the chief meeting officer. To let everyone in the place know where you're going, why you're going there, and most importantly... O que está dentro para eles chegarem lá com você? As pessoas gostam de falar sobre onde estão indo, por que estão indo lá. Mas eles sempre deixam fora a terceira coisa. Quando você entra em um novo emprego e diz, nós queremos mudar. Mudar é ótimo, nós temos que fazer isso.
-01:21:52
-Speaker 11
-Você esquece, as pessoas odeiam mudar. Você tem que explicar o que está dentro para eles mudarem com você. Então, seja o oponente de significado e dê significado a cada um desses pessoas que estão lá fazendo aquele trabalho. Para que eles entendam por que você está indo, onde você está indo. E eles sabem o que está dentro para eles. Um melhor emprego, mais pago, mais flexibilidade, talvez nada. Você não pode dizer nada. Mas você tem que entender que é um deles. Outra parte do emprego, seu emprego é não dar todas essas diretivas e não ser a pessoa que sai da clara.
-01:22:32
-Speaker 11
-Eliminar as coisas é um grande problema. Você não pode, de repente, ter uma burocracia. Vamos aqui, vamos lá. Eles têm 20 regras, para impedir os empregados de chegarem lá. Você tem que quebrar todos esses pequenos filósofos que ocorrem. Todos aqueles pequenos burocráticos que estão checando as caixas em algumas camadas, desacelerando você. Você tem que ser a pessoa que... Nós sempre usamos essa analogia de curtir. Você vê isso todos os quatro anos nas Olimpíadas,
-01:23:03
-Speaker 11
-com a burocracia na frente. Você tem que quebrar tudo o que está no caminho. Você tem que ser o chefe burocrático para que as pessoas possam agir e fazer coisas. Você tem que ter, se você quiser, na minha experiência, e eu vi milhares de gerentes na minha vida, você tem que ter um gênero de generosidade. Tem que estar no seu corpo. Você vai adorar ver pessoas promovendo, você não pode ter uma fome de fome, você não pode, oh, Joe foi promovido, eu deveria ter tido esse trabalho, ou Mary teve isso, ou Pete deveria ter tido isso, ou o que quer que seja, você tem que gostar do sucesso das pessoas, você tem que adorar o sucesso das pessoas, você tem que entrar na pele deles e realmente estar emocionado com a saúde deles, você tem que adorar dar respostas, você tem que ser ativado em dar bônus,
-01:23:58
-Speaker 11
-você tem que se sentir ótimo, e não, meu Deus, eu dei a ele um bônus e eu não peguei um tão grande, nenhum desses sentimentos, você tem que apenas se acalmar com eles, e se eu olhar para todos os líderes que eu vi, os melhores que eu vi, têm esse gênero de generosidade, você tem que perguntar, você tem isso, ou você tem um pequeno gênero ali que está te matando, que vê outros sucessos e está ansioso em seu corpo, você não pode ter isso.
-01:24:31
-Speaker 11
-Corta, limpa e depois você vai trabalhar todos os dias para realmente se divertir. Vocês são pessoas que se divertem, encontrem todos os tipos de maneiras de vencer. Há pequenas vitórias o tempo todo e celebre cada uma delas. Nós descobrimos uma maneira de colocar um pedaço em tudo. Encontre uma maneira, encontre uma maneira de fazer pequenas vitórias, grandes vitórias. E se você conseguir muitas pequenas vitórias, você conseguirá uma grande vitória quando os animais estão juntos.
-01:25:04
-Speaker 11
-Mas pense sobre o trabalho dessa maneira. O trabalho é divertido. E seu trabalho é fazer isso divertido se você é um líder. Não seja um bicho que está grudando. Se você é um gato, se espalhe. Pense sobre o entusiasmo e o divertimento que você pode ter em seu trabalho. Faça isso divertido. Seja o chefe divertido, senhor. Então, na minha opinião, você tem uma grande responsabilidade, a maioria de vocês.
-01:25:34
-Speaker 11
-Deus te deu um trabalho onde você é responsável pelas vidas das pessoas. É um grande problema. Você tem famílias que você é responsável por. Faça um grande sucesso para elas. Você tem uma das luxúrias da vida para impactar as vidas das pessoas. Pegue-a, esgueça-a e pegue-a para trás.
-01:26:15
-Speaker 2
-General Electric, da GE, com muito, muito, muito tempo. Mando. Na verdade, eu peço para mandar, porque eu não estou no grupo. Mas, sim, a gente dá um jeito de chegar. E ele tem um livro muito legal, que é um livro chamado Winning. Provavelmente, em português, deve ser vencendo, não sei. Às vezes tem umas traduções meio malucas, né? Mas é um livro muito bom, muito bom. E ele fala muito do processo, de cultura,
-01:26:48
-Speaker 2
-de como que ele, liderava uma equipe, pô, de dezenas de milhares de pessoas, transformando a GE numa das maiores potências mundiais. Muito baseado nesses quatro princípios que ele falou ali. E o, e o... E quando a gente pensa em tentar traduzir um pouco agora, né, o que é papel do líder, o que é a liderança, qual que é o papel do líder, Chief Meeting Officer, garantir que tem significado as coisas.
-01:27:18
-Speaker 2
-E isso, conforme o tempo vai passando, 2026 já, olha que loucura, 2026, pessoal. Vai ficando cada vez mais importante. As pessoas têm mais acesso à informação. As pessoas têm mais opção. Ela pode fazer a mesma coisa que ela faz no lugar hoje, provavelmente no lugar do lado. Muitas vezes ganham mais. Então, por isso que você acaba tendo um monte de pipocão de jogar para o outro. Vai falar um ano aqui, seis meses lá, um ano e meio lá, recebeu o papel de ter o significado. É muito importante.
-01:27:51
-Speaker 2
-E não vai ser o gerente de RH que vai fazer isso. Vai ser o líder da companhia. Vai ser a CEO, a presidente, quem for que seja. Muitas vezes não tem nenhum desses dois casos. Cultura. A gente falou bastante. Estratégia. A gente vai pular isso porque foi basicamente o que vocês viram aqui nos últimos dias. A gente falou de questão financeira, vendas, marketing, experiência do cliente. E agora a gente vai mergulhar um pouquinho mais em como que a gente consegue ter as pessoas certas nos lugares certos,
-01:28:25
-Speaker 2
-garantindo que toda essa engrenagem, ela tenha óleo para funcionar bem, que são as pessoas. Então, a gente pensa muitas vezes em RH, gestão de pessoas, você tem tanta parte da gestão operacional, digamos assim, que é o que a gente não vai falar aqui, a folha, encargo fiscal, etc. Muitas vezes isso inclusive até fica com o subsegmento do departamento financeiro. E a gente tem a gestão estratégica de pessoas. E aí a gente está falando de contratações, onboarding, avaliação de desempenho,
-01:29:03
-Speaker 2
-o lance lá do Romário, do Edmundo, o que a gente faz nesse tipo de situação, feedback, treinamento e remuneração. Essa é a parte onde a gente consegue, de fato, influenciar. Como que as pessoas vão se comportar dentro da empresa. São esses seis pontos aqui. Então vamos começar por contratação. Serve também pra promoção. É basicamente o mesmo, de uma mentalidade. Tem duas coisas quando a gente vai contratar alguém que a gente precisa avaliar.
-01:29:36
-Speaker 2
-Muitas vezes a gente olha a primeira e acaba esquecendo a segunda e a terceira. Super comum, super comum. Conhecimento técnico, é a parte mais fácil, digamos assim, de avaliar. A gente faz exercício, estudo de caso, pergunta pros outros, vê se a pessoa sabe mexer no Excel, vê se ela conhece vendas naquela determinada indústria. Dependendo do lugar que ela veio, você meio que já vai dar um check nessa caixinha. Essa parte técnica é a parte mais óbvia.
-01:30:06
-Speaker 2
-É a parte que a gente dedica mais tempo, naturalmente. Só que tem duas outras partes que muitas vezes a gente passa direto, passa batido. Que é a parte dos comportamentos e a parte do fit cultural com a empresa. Então, por que comportamental é importante? Porque tem atividades que você precisa ter determinadas competências e atividades que você precisa ter competências diferentes. Por exemplo, dá para ter uma pessoa super desorganizada no financeiro?
-01:30:41
-Speaker 2
-É mais difícil. É impossível? Talvez não. Mas não é mais fácil você ter uma pessoa com um perfil mais analista no financeiro? A mesma coisa, a gente pode pensar que dá para ter uma pessoa que é muito crítica em vendas? É mais difícil. Vendas funcionam quando você tem uma pessoa mais otimista. Quando você tem uma pessoa que tem um perfil mais comunicador.
-01:31:12
-Speaker 2
-Claro, tem um monte de gente analista, analítico em vendas, é normal, principalmente em vendas mais técnicas, mas dá para você ser super pessimista, super crítico? É mais difícil. Por outro lado, é importante o certo do que é pessimista no financeiro, você não quer contar com a sorte, você quer estar coberto em todos os pontos, então na hora que a gente faz essa avaliação comportamental de cada uma das posições, ela tem uma influência muito grande no resultado, se você vai ter um sucesso com aquela contratação ou não.
-01:31:47
-Speaker 2
-E por fim, você tem a parte do fit cultural, que para mim é uma das mais importantes. Por quê? Se a gente tem uma empresa, se a gente tem os valores aqui de paixão, igual a Brenda falou, de rigor, igual o Francisco falou, eu vou trazer uma pessoa que pensa o oposto. Que é super frio e calculista pra trabalhar com a Brenda?
-01:32:17
-Speaker 2
-Num ambiente onde só tem apaixonado? No pior, no melhor dos casos, essa pessoa simplesmente vai ponderar ali, vai trazer um pouco de balanço pro outro lado e tudo mais. Mas no pior dos casos, essa pessoa daqui a dois, três meses tá saindo. Só tem louco apaixonado aqui, lunático. Não, eu quero um negócio aqui frio e calculista com um número um mais um igual a dois. Não vem com esse negócio de um mais um igual a três aqui. Pelo amor de Deus. Eu sei. Eu sei que não é. Mas é um valor importante.
-01:32:48
-Speaker 2
-Se é uma pessoa que não se sente confortável nesse tipo de valor, ele vai acabar diluindo sua cultura. E a mesma coisa pro rigor do Francisco, pra flexibilidade do fulano, pra qualidade do Beltrano. A gente precisa avaliar essas coisas no processo seletivo. Senão, você vai trazer uma pessoa, que beleza, vai implementar ali, vai ajudar no curto prazo, vai resolver um problema, talvez, no médio prazo, mas daqui a um ano, dois anos, três anos,
-01:33:20
-Speaker 2
-essa pessoa vai sair. Ou, por uma motivação sua, ou eu não quero essa pessoa diluir na minha cultura aqui, tá dando problema toda hora, dor de cabeça, papapá, papapá, ou essa pessoa vai sair, fala assim, porra, legal, mas agora vou para um lugar mais alinhado com as minhas crenças. Isso acontece direto, direto. Foi o que aconteceu comigo, quando eu decidi sair para o outro fundo de investimento que eu trabalhava, para começar o meu próprio fundo de investimento. Foi uma questão 100% de desalinhamento cultural.
-01:33:52
-Speaker 2
-Eu não me via lá. Eu não queria ter a sociedade como as outras pessoas lá. Eu acreditava em outras coisas, eu queria fazer coisas diferentes, independente de quem está certo ou quem está errado. Eu não me via lá. Aqui, mesma coisa. E tem várias perguntinhas que a gente pode fazer no processo de contratação. E no processo de promoção também. Quais são as suas fraquezas? O que você gosta? Como você avalia sucesso? O que te deixa frustrado?
-01:34:23
-Speaker 2
-Se você pergunta para a pessoa no seu processo de seleção, o que te deixa frustrado? E a pessoa vira e fala, pô, não, tem cara, mas às vezes a galera vai muito na paixão aqui e pouco na razão. Você já sabe que, pô, isso é um flag da hora que a Brenda está contratando o time dela. Aqui, perguntas abertas são ótimas, ótimas. Não é falar assim, me fale um valor que você... Não. Quais são as suas fraquezas? Ah, não tenho fraqueza. Você já vê que a pessoa não vai ter aquele quê de humildade.
-01:34:56
-Speaker 2
-Se você quer uma pessoa super confiante no teu time, e você faz alguma pergunta que... Ah, o que te deixa inseguro? A pessoa vai e lista um milhão de coisas e fala assim, pô, essa pessoa não é tão confiante, eu preciso de uma pessoa mais confiante para esse time. Então aqui, pessoal, pergunta aberta é uma beleza, mas não dá para fazer pergunta aberta e não ter uma escuta muito ativa. Técnica, comportamento e fit cultural, tanto para contratar quanto para promover. Na hora que a gente vai trazer uma pessoa para o nosso time, beleza, contratamos, próximo.
-01:35:30
-Speaker 2
-passo, vamos trazer uma pessoa para o nosso time. Aqui, erro super, super comum. O que é? Contrata aí, chega no primeiro dia, fala para o RH, faz isso, depois faz aquilo, peraí, mas o computador não está funcionando, mas vai para não sei o que. Falando de tal, dedico mais hora aí com o fulano que acabou de entrar, pô, está foda hoje. Não é mal, né? Quem nunca, né? Mas na hora que a gente traz uma pessoa, se a gente começa a computar...
-01:36:04
-Speaker 2
-Os tempos dedicados, né? Abertura de vaga e recrutamento, na média, três meses. Abre a vaga, entrevista uma galera, demora um mês e meio, dois meses, a pessoa demora mais um mês para entrar, três meses. Três meses ela entender onde é o banheiro. A não ser que seja, cara, puta, é um time de consentem, é uma atividade muito padronizada, pá, ela vai entrar, já vai, torando e funcionando. Se é alguma coisa um pouquinho mais específica, tem um tempo de onboarding, dela entender quais são os sistemas, dela entender quem são os clientes, dela entender quem são os fornecedores,
-01:36:37
-Speaker 2
-dela entender qual é a dinâmica de time, dela entender como que é a expectativa do chefe dela, uma série de coisas. E aí ela começa a agregar valor. Legal, poxa, entrou aqui, onboarding, passou uns meses, dois, três meses, começou a agregar valor. Mas até bater uns doze meses... Ela gastou muito mais energia e custo do seu time do que, de fato, ela está trazendo de benefício marginal para a sua empresa. A minha, muito, sempre lembro de um caso, né?
-01:37:10
-Speaker 2
-A minha esposa, ela trabalhou no Goldman Sachs. É um banco, trabalhou na área de investment bank. Área que trabalha pra caramba, Nova York. Isso, trabalha com uma bandeirada. E no primeiro dia, né, de onboarding lá delas, cabeçada lá, né? Entrando. Entrando, e o pessoal falou uma coisa assim, que ficou marcado pra ela, e ela me contou e sempre reflito sobre isso. O pessoal fala assim, pessoal, bem-vindos aqui, ó, tem que fazer A, tem que fazer B,
-01:37:44
-Speaker 2
-tem que fazer C, tem que seguir, uma empresa gigante, né? E ele falou, e mesmo assim, a probabilidade de vocês causarem mais dano pro Goldman Sachs do que benefício é maior. É mais provável que você cause dano ou que você cause prejuízo do que valor para o Goldman Sachs. Por quê? A empresa é tão grande, tão grande, que para você começar a gerar valor vai demorar 12 meses, 15 meses, 18 meses. Até lá, você consumiu uma energia absurda,
-01:38:14
-Speaker 2
-você consumiu o tempo absurdo das pessoas e se você dá uma besteirinha aqui, é um dano muito grande. E, óbvio, a gente não precisa ser tão crítico, tão extremista nos nossos negócios, mas se a gente coloca na ponta do lápis, ah, não é 12 meses, é 9, é 8, é 7, não importa, é mês pra caramba. Então, aqui, vale muito a pena a gente prestar 1. Muita atenção na contratação, que é o que a gente falou, e 2. Em garantir que essa pessoa, a gente consiga trazer o tempo.
-01:38:47
-Speaker 2
-para começar a agregar valor o quanto antes na companhia. A gente tem algumas práticas para isso. Práticas simples. Primeiro, deixa tudo preparado. Gustavo, mas isso é tão óbvio. É óbvio. A menor parte das pessoas faz isso. A menor parte. Vai chegar, você vai fazer isso às nove, isso às onze, isso uma, isso quinze, na primeira semana, na segunda, na terceira, na quarta. A menor parte das empresas faz isso.
-01:39:17
-Speaker 2
-Dois, apresentação de cultura. O que a gente valoriza como cultura? Esse é o momento que a pessoa vai fazer uma referência com o recém-nascido. É a esponja. A pessoa tá olhando pra tudo, prestando atenção em tudo, não tem muita opinião ainda, tá só observando, só observando, só observando. Aí você vai e essa pessoa vai almoçar no primeiro dia com um cara que é desalinhado culturalmente na empresa. Olha o dano que você causou. Vai ficar uma hora lá ouvindo pô, me promoveu, pô, fudeu, não sei o que,
-01:39:48
-Speaker 2
-não sei o que lá. Aqui é aquele momento assim mega delicado, pessoal, mega delicado. E faço essa analogia, né, que eu estou com uma bebida de dois meses em casa. E aí, mesmo, segundo já, então não é tão novidade assim, mas é a esponja, esponja. Qualquer coisa que você faz, mas puta, é da chupeta, não dá, meu Deus do céu. Aqui é a mesma coisa. Fazer paralelo com dar chupeta é fogão, mas é.
-01:40:20
-Speaker 2
-Mas é o momento esponja, pessoal, é o momento esponja. O papo com o fundador, com os líderes, com a CEO, com a diretora, com não sei quem, super importante, porque é uma oportunidade única de você passar a cultura da empresa. Depois, é sempre boa prática você ter alguém, além do supervisor direto, alguém que é muito alinhado com a cultura da empresa e que está numa posição parecida. Se é um analista, bota um outro analista. Pode ser de outra área.
-01:40:50
-Speaker 2
-Ou bota um coordenador, ou vice-versa. Mas não vai botar um analista com a diretora de não sei o quê. Porque senão fica muito top-down, fica muito de cima pra baixo. Tem que botar alguém aqui, assim, mais, sabe, meio buddy aqui, que é tipo brother. Isso ajuda muito. Por quê? De novo, o momento expõe. A pessoa tá ouvindo tudo, você tem uma pessoa que tá falando de igual pra igual pra ela. Avaliação de desempenho. Chegou o momento tão esperado, Henrique. Vamos falar do Edmundo aí.
-01:41:23
-Speaker 2
-Avaliação de desempenho. E aí? Vamos pensar num caso hipotético aqui, pessoal. A gente tem um time de 20 vendedores. 20 vendedores, todo mundo tem uma meta de 100%. Que seja, 100 vendas, 100 contratos, 1 contrato, 100%. E você tem um vendedor... Que ele bate.
-01:41:53
-Speaker 2
-120% da meta. Olha que legal. 120. Era pra vender 10 mil, ele vendeu 12 mil. Porra, 12 mil é o mais da empresa. Bacana. Era pra vender 100 mil, vendeu 120 mil. Legal pra caramba, né? Boa. Só que lembra, a gente tem mais 20 vendedores. Mais 19, no caso. Então, fiz que a gente tem 21. Mais 20 vendedores. Pra esses 20 vendedores, vamos imaginar, que o cara que tá batendo.
-01:42:24
-Speaker 2
-120% da meta ele é, desalinhado culturalmente com a empresa. E ele piora a performance, tem uma influência negativa nas demais pessoas de 2% só. Só 2%. 2% numa semana é nada. É tipo, é uma hora de cafezinho. É uma hora que chega atrasado um dia, uma hora que dá mais cedo um outro, enfim. Isso aí é um impacto de trabalho de 2%. E ele vai lá, acontece algum problema, ao invés dele ajudar na dinâmica da empresa,
-01:43:01
-Speaker 2
-ele reverbera o problema. Sabe aquele tipo de pessoa? 2% vezes 20 pessoas, ele está causando um dano de 40%. O resultado líquido dele, se é que essa métrica existe, é 120% menos 40%. Ele não está batendo os 100%. Ele está batendo talvez no dele ali, mas ele está influenciando negativamente todo mundo 2%. Então, a influência dele para esse grupo de vendedores é pior do que um caso oposto.
-01:43:38
-Speaker 2
-Vamos pensar um caso oposto. É o cara que bateu 80% da meta. Ele não vendeu 10 mil, ele vendeu 8 mil. Ele não vendeu 100 mil, ele vendeu 80 mil. Só que, quando acontece um pepino, ele é o cara que fala, não, deixa isso pra lá, bora, vai, não acontece mesmo, não, não sei o que, o pessoal vai resolver, bora, vai. Que, pô, chega um pouquinho mais cedo. Quando tá batendo o horário lá, uma hora de almoço dele, quando bate 45 minutos, não, vamos logo pagar a conta aí, senão a gente vai chegar atrasado e tal, pá. Aquela pessoa, ele não é o Gandhi do time de vendas, não é o Jack Weld, não,
-01:44:16
-Speaker 2
-ele é um vendedor legal e tem um impacto de 2%. O impacto líquido dele, né, fazendo a conta oposta, 80%, mais 2 vezes 20%, mais 20 vezes 2%, o impacto líquido dele é 120%. Ele entrega, olha só que loucura, pessoal. Você tem um vendedor que tá batendo a meta, um vendedor que não tá batendo a meta. Esse aqui atrapalha um pouquinho, pessoal, 2% só que ele atrapalha. Nada, uma horinha por semana. Esse aqui causa um impacto positivo de uma hora por semana.
-01:44:49
-Speaker 2
-O resultado líquido dele é o oposto. Um está batendo 120% e o outro está batendo 80% da meta. Um está entregando o equivalente líquido a 12 mil e o outro o equivalente líquido a 8 mil. 12 dividido por 8 dá 1,5. O cara está entregando, pessoal, ele é 50% melhor para a empresa do que o outro cara. Por um impacto de 2%. Isso aqui é o quanto, como é importante a gente ter uma visibilidade das nossas ações.
-01:45:32
-Speaker 2
-e da influência das nossas ações nas demais pessoas do time. Se a gente pega essa conta ao invés de 2%, faz 5%, duas horas por semana, o resultado é ridículo. Então, aqui, como que a gente endereça isso? Com um fit cultural. Promovendo pessoas que tenham um fit cultural também. Que a gente faça um onboarding, traga a galera que, poxa, tem boa influência pro time. E quando a gente vai fazer a avaliação de desempenho,
-01:46:02
-Speaker 2
-nossa terceira chance aqui, ó, já imagina, contratamos um manutão bem assim, fizemos um processo manberme ali de onboarding, pô, a gente tem a terceira chance aqui, que é a avaliação de desempenho. Avaliação de desempenho, primeiro, né, como boa prática, é importante a gente ter as partes mais... Vai. Os indicadores mais clássicos ali, técnicos da coisa, né, então vendas, é contrato, volume de vendas, NPS, operações, tempo de entrega, palidade, custo, absenteísmo, atendimento também, você tem as métricas específicas, financeiro, poxa, BRE tá saindo no prazo, tá certo, teve mudança, não teve, teve ressalva na auditoria, o critério que for, mas todos os critérios a gente tá, mas pra todo mundo a gente tem, ó, o mesmo fit cultural aqui, ó, que é o fit cultural da empresa.
-01:46:55
-Speaker 2
-A gente tem senso de urgência, a gente tem foco no cliente, performance, atitude de dono, qualidade, por exemplo, numa empresa que tem esses valores como valores. Aí beleza, a gente tem aqui como avaliar, a gente vai lá, faz a avaliação, top down, supervisor, avalia, o cara do lado, não sei o que, aí você tem diferentes avaliações, mais robustas e menos robustas, mas a gente conseguiu avaliar os funcionários nessas óticas aqui. Aí a gente faz um gráficozinho, fit cultural embaixo, performance ali em cima.
-01:47:35
-Speaker 2
-Performance, bateu a meta, não bateu, tá indo bem, tá indo mal, alto, médio, baixo, e fit cultural a mesma coisa. Pessoal, a ideia aqui do exercício vai ser um negócio bem basicão, mas muito poderoso. A gente pode fazer esse exercício aqui ser 10 vezes mais complexo. Em alguns casos vale a pena, na maioria dos casos não vale. Mas vamos lá. Aí a gente tem as partes fáceis, né? Parte fácil. Pô, parte da performance, baixo, fit cultural.
-01:48:05
-Speaker 2
-Isso aqui, né? Beleza, né.
-01:48:08
-Speaker 1
-Tchau, obrigado.
-01:48:09
-Speaker 2
-Tchau. Esse aqui também, pô. Esse aqui, ó, o cara tá bem, ela tá bem, no happy hour tá todo mundo querendo ficar perto, porque, pô, a pessoa que tá bem contada vai ser promovida, todo mundo sabe quem é essa pessoa. E essas duas aqui? Aqui tem performance alta e fit cultural baixo, o médio. E aqui tem fit cultural alto e a performance mais ou menos.
-01:48:40
-Speaker 2
-É aqui que começa a ficar mais... O que a gente faz? O que vocês fazem? Fit back. Alguém quer falar o que vocês fazem nessa situação aqui? Tem performance boa e fit cultural mais ou menos. Trabalho, ajuda. Treinamento, tenta desenvolver. Fit back. O que mais? Mentoria.
-01:49:11
-Speaker 2
-Um monte de coisa. E se nada disso? A gente tenta uma mentoria. Três ciclos seguidos. Então, fit back. Mesma coisa. E aí? O que a gente faz? Ah, opa, aí começa a apertar um pouquinho, sentindo o bolso, boa, gostei dessa. Em relação ao pitch cultural, ótimo, pessoal, livro, texto, tá lindo. Próximo ciclo, continua.
-01:49:42
-Speaker 1
-Vamos embora.
-01:49:45
-Speaker 2
-Botou em outra área, jogou o problema pro cara do lado, boa. Essa é boa mesmo. É tráfico de drogas, né? Tráfico de drogas, é, essa eu nunca tinha ouvido. Expõe o profissionalismo dele, né? E o... E o oposto, pessoal. Ó, performance mais ou menos, mas pitch cultural bom. Treinamento. Ele tá em outra área, também.
-01:50:17
-Speaker 2
-Jogou um cara que não bate meta pro cara do lado aí. Não, mas o cara é gente boa, pô, é comprado. Vai, leva esse aí, ó. Podemos tentar, é uma alternativa. Podemos tentar, boa, aprenda. Não tô falando na brincadeira aqui, é uma alternativa válida, super válida essa. O que mais a gente pode fazer, pessoal? O que ela falou? Jogar pra outra área pra ver se não engaja melhor em outra área, performa melhor em outra área. Tô falando, ó, recapitulando, tô falando pessoas que estão batendo 70, 80% da meta,
-01:50:49
-Speaker 2
-mas que são compradas ou alinhadas com o fit cultural da empresa. Pessoal, aqui não tem resposta, tá? Essa é a brincadeira. A gente podia continuar aqui um tempão. E eu vou dar dois exemplos, que eu vejo funcionando nos dois lados. A gente tinha tudo, todas as boas práticas de gestão levam mais pro lado de que o profissional tóxico,
-01:51:21
-Speaker 2
-o profissional que dá trabalho, ele precisa ser desligado da companhia, eventualmente. Tenta mentoria, tenta feedback, tenta treinamento, bota no programa de recuperação, reciclagem, papapá, papapá. Mas se isso não muda, ele é uma pessoa que está prejudicando a cultura da companhia e ela precisa ser desligada. Em geral, as boas práticas de gestão levam para esse lugar. E até esse exercício aqui na brincadeira que a gente fez do 2% também leva para esse lugar.
-01:51:54
-Speaker 2
-É melhor ter uma pessoa que está batendo 90% ou 95% da meta e que está contribuindo positivamente de várias outras maneiras que se a gente passasse na ponta do lado, a gente pensasse que isso é maior. Se você pega e faz a análise composta, compounding desse negócio no médio e longo prazo, é indiscutível. É muito claro que a decisão deveria ser essa. E o meu sócio na canoa, tem dois sócios na gestora.
-01:52:25
-Speaker 2
-Ele é uma pessoa que é muito faixa preta em gestão. Ele foi o cara que tocava o Burger King na América Latina. Nessa época que saiu de cinquenta e poucas lojas aqui no Brasil para mais de mil, tinha o Burger King em tudo quanto é lugar. Ele foi presidente da Kraft Reis na China, um monte de fábrica, 5 mil pessoas, enfim. Foi presidente da Kraft Reis no Canadá, também tinha um faturamento de mais de 20 bilhões de reais. Um cara parrudo, um cara parrudo.
-01:52:57
-Speaker 2
-E ele fala um negócio do Edmundo. E é muito engraçado, porque ele fala o seguinte. Se eu fosse contratado para ser o técnico da seleção brasileira e a Copa daqui a um ano, e eu tivesse a oportunidade de convocar o Edmundo, eu convocaria 100% das vezes.
-01:53:27
-Speaker 2
-E curiosamente, eu conheço bem o time que trabalhava com ele no Bull Rear King e tinha um cara lá que era claramente uma maçã podre pro negócio. Acho que o maluco era a culpa, cara, entendeu? Eu equivalentei àquele cara que performa, mas atrapalha o resto do mundo, cria confusão, tá sempre otimizando pro dele, etc. E ele falava, eu prefiro ter um monte desses talentos e eu fazer o meu desconto, ir lá, então o cara fazia merda, eu ia lá e resolvia o problema do cara,
-01:53:58
-Speaker 2
-e o outro fazia, brigava com um sequinho, ia lá e fazia igual, não sei o quê. Por quê? No caso dele, fazia muita diferença. No caso do Zé, esse cara, pra entregar esses resultados excepcionais ali, ele precisava do Rahul, que é o nome desse cara. Então ele preferia ter ele no time e ele ia lá e varrendo e resolvia as coisas. Eu diria que esse talvez seja o caso da minoria, mas o principal ponto aqui de trazer esses.
-01:54:31
-Speaker 2
-dois lados da moeda, pessoal, é que tem casos e casos, pessoas e pessoas, empresas e empresas e gestores e gestores. Um gestor que tem tempo, que precisa dessas estrelas, ele talvez possa estar mais aberto a ter vários edmundos, o termo edmundo. O cara que tem uma empresa padronizada, que a vida dele não depende da performance de.
-01:55:02
-Speaker 2
-um ou outro, e óbvio, o impacto desse cara também não é terrível, poxa, você pode ir pra esse outro lado. Então se você precisa muito da performance de uma pessoa, você tem tempo pra resolver os pepinos e etc, talvez você consiga aceitar um edmundo ou outro. A grande maioria dos casos, isso não é verdade. O gestor não tem tempo nem de ir no banheiro. A influência para o time é pior do que todo mundo consegue metrificar.
-01:55:32
-Speaker 2
-E o cara não é tão imprescindível assim. Eu diria que essa é 90% ou 95% dos casos, Henrique. Nesse caso, a boa prática é aperta um pouquinho os cintos, tenta duas, três, quatro vezes, não funcionou, troca. Mas, de novo, é caso a caso. E como que faz para você, aos poucos, dar uma limpada, revigorada nessa cultura, tendo edimundos e trazendo novos talentos que, por sua vez, vão ser contaminados por esse edimundo?
-01:56:03
-Speaker 2
-É uma junção de coisas, Luiz. É uma junção de coisas. Você tem que pensar nas ferramentas de cultura. Você tem que pensar no que é a sua prioridade. É a mesma coisa, não dá pra gente tentar fazer um plano pra sair de um milhão nesse ano em 2026 pra um bilhão em 2027. Passo a passo. Priorizar. O que é mais importante pra empresa? Pô, então eu vou priorizar esses dois pontos culturais, esses dois pontos de performance, cara, tem três maçãs podres aqui, eu vou perder as três agora, fodeu, então eu vou tirar só o pior. Aí no ano seguinte, cara, minha meta é resolver isso, eu não quero.
-01:56:34
-Speaker 2
-mais falar desse assunto há cinco anos, 2027, não vou mais mais falar desse assunto, aí você coloca, sabe? E por aí vai. Então aqui, pessoal, essa matriz é super útil, ela é mais um insumo pra vocês. E rapidamente, muita gente pergunta, poxa, e aí a avaliação do desempenho? Você pode ser o quão complexo, o quão completo você quiser. Você pode fazer um processo liderado, pra Pedro Lula.
-01:57:06
-Speaker 2
-Você pode fazer avaliação 360, pega a plataforma, 10 pessoas, 5 pares, 4 não sei o que, aí você pega um monte de insights. Você pode fazer uma vez por ano, você pode fazer várias vezes por ano, você pode fazer com poucos indicadores e poucos valores, não, 3 indicadores de performance, bateu, venda não bateu, é alinhado, não é, ou você pode fazer, sabe, aqueles cockpits de piloto de avião, né, que tem 1 milhão de indicadores. Em geral, eu, Gustavo, prefiro muito mais o Simplon, Simplon básico bem feito.
-01:57:44
-Speaker 2
-Mas, dependendo da complexidade, do tamanho da empresa, você precisa começar a ter um pouco mais de erro, vai, robustez nesse processo. Mas, de novo, empresa é empresa, essas são decisões que você precisa ter. Ah, não faço nada, pelo amor de Deus, não vai começar do mais completo, começa do básico, ó, um processinho por ano. Líder liderado, 3, 4 indicadores, 2, 3 valores, e faz.
-01:58:14
-Speaker 2
-Sem uma grande decisão, pra você começar a ter mais cadência nesse processo. A não ser que seja um negócio, um desespero total, todo mundo, ninguém tá performando, ninguém tá alinhado, a decisão vai demitir todo mundo, contratar de novo, aí você faz o negócio mais completo. Na maior parte dos casos, essa não é a realidade. Feedback. Boas práticas de feedback, pessoal. Aqui tem muita literatura também. Não tem tanta arte aqui. Aqui é mais ciência.
-01:58:45
-Speaker 2
-Feedback não vai falar sobre a pessoa, vai falar sobre um fato. Então, o que é pessoa versus fato? A gente pensa na situação, comportamento e impacto. Situação. Pô, ao invés de você falar, ó, fulano de tal, você sempre chega atrasado, hein? Você vai falar, a situação x, y, z, todo mundo trabalhou para a apresentação na sexta-feira, você chegou atrasado na reunião com o cliente e a imagem que a gente passou foi essa.
-01:59:18
-Speaker 2
-Então você tenta tirar a pessoalidade do feedback e você vai mais para o fato, para o acontecimento. Por quê? Porque a pessoa vai ficar menos defensiva, ela não vai achar que você está atacando ela, ela vai ficar mais aberta ao vivo. Então você tem dados concretos para poder ter um feedback mais completo. Ah, no final do ano, pô, eu dei três, quatro feedbacks aqui, está tudo anotado. Você consegue construir um filme versus apenas uma foto da situação.
-01:59:51
-Speaker 2
-Assim, quanto mais rápido a gente conseguir atuar no feedback, melhor. Demorar muito, putz, um mês depois, três, não é a mesma coisa, não é. Aconteceu ontem, fala hoje. Aconteceu hoje, fala amanhã. Sim, simples. Isso deveria ser tratado com muita naturalidade. Muita naturalidade. Eu assisti recentemente um vídeo do Steve Jobs, que é muito louco. Não sei se alguém já viu esse vídeo.
-02:00:22
-Speaker 2
-É um vídeo que o cara fala assim, pô, o que foi que você aprendeu na sua empresa anterior que você aplica na Apple agora? Ele era da Apple, começou um outro negócio e voltou para a Apple. Esqueci o nome do outro negócio, o Nex, eu acho. O que você aprendeu lá, você implementa agora. E aí é um vídeo que chama muita atenção, porque ele fica tipo 16 ou 18 segundos em silêncio. É numa universidade, assim. Ele fica parado, pensando, e aí começa a ser até meio constrangedor, né?
-02:00:56
-Speaker 2
-Porque, pô, tá em silêncio, né? E aí ele fala, cara, o que mais mudou pra mim... Ao longo do tempo, não necessariamente naquela empresa, mas ao longo do tempo, é que eu comecei a ter um approach mais de longo prazo com as pessoas. Antigamente, eu via um problema, eu queria resolver o problema. Então, se o Lucas estava, não sei, fazendo uma análise que precisava ser feita de uma maneira diferente,
-02:01:33
-Speaker 2
-eu ia lá e eu mesmo fazia. Eu falava, não, Lucas, faz assim, faz assim. E ao longo do tempo, eu comecei a ter uma visão de que o mais importante é ter o Lucas aqui. Por 10 anos, 15 anos. E tomando essas decisões sozinho, e crescendo, e aprendendo, e ensinando outros Lucas depois. E ele fala, olha, meu maior aprendizado, olha que loucura, meu maior aprendizado aqui foi, começar a ter uma visão mais de longo prazo em relação a pessoas.
-02:02:06
-Speaker 2
-E isso toca diretamente com o ponto de feedback, diretamente. Tem basicamente quatro coisas que a gente pode fazer quando acontece uma situação que precisa ser dada um feedback. Ou você se importa com a pessoa e atua diretamente, melhor de cenários, você vai lá e fala pô, é a reunião de sexta-feira, todo mundo se preparou, você chegou atrasado, causou uma expressão ruim pro cliente, ele vai achar que a gente é desorganizado, eu sei que não foi sua intenção, mas isso não pode acontecer, papapá.
-02:02:38
-Speaker 2
-Pô, direto no assunto, direto no ponto, isso é super bem visto. Tem um cenário que você se importa com a pessoa, mas você não confronta diretamente. É um cenário muito incomum, muito comum. É onde a gente tem empatia. Ah, deixa pra lá, melhor foi sem querer, eu tava no trânsito, o trânsito tava complicado mesmo, não sei o quê. Só que isso é uma empatia nociva, porque a pessoa não sabe que ela causou esse problema.
-02:03:10
-Speaker 2
-e você não está dando a oportunidade para ela de melhorar em uma próxima vez. É aqui que o Steve Jobs está falando. E aí você tem uns cenários onde você não se importa com a pessoa, e você confronta diretamente, o famoso expor, e aí a pessoa já fica com um desprezo, fica muito defensiva, já acha que é um negócio pessoal. E você tem, quando você não se importa e não confronta,
-02:03:40
-Speaker 2
-que é, deixa eu falar, se a pessoa não vai mudar, daqui a pouco a gente demite ela. Mas você está abrindo mão de uma potencial melhoria aqui. Essas quatro coisas que podem acontecer.
-02:03:58
-Speaker 12
-A pessoa passa por cada uma delas até chegar aquela hora que você não está mais nem aí para ela. É como se você estivesse em um patamar ou não. Quando você atrita, você já chega em uma dessas características específicas.
-02:04:13
-Speaker 2
-Isso aqui é como a gente pode reagir a um determinado feedback. Em geral, na minha visão, a gente não tem que passar por nenhuma dessas. A gente tem que estar sempre direto. Mas confrontar não é ser combativo. Confrontar é você endereçar um ponto que precisa de atuação. Por quê? Porque se a gente não atua dessa maneira, a gente não está dando a oportunidade para a pessoa melhorar para uma próxima vez. Então, em nenhum cenário, uma empatia nociva é positiva.
-02:04:48
-Speaker 2
-Não é. Ah, deixa para lá. Muitas vezes a gente acha ser bonzinho. Eu percebo que eu faço um pouco de tudo. Mas é importante, o primeiro ponto, é importante a gente perceber isso, porque a pior coisa que a gente pode fazer é ser bonzinho quando a gente deveria ser transparente, quando a gente deveria atuar diretamente.
-02:05:13
-Speaker 12
-Eu sempre começo assim, eu sou transparente, eu chego, eu converso, eu explico, aí depois eu chamo atenção, aí depois eu sou dura, eu falo que eu começo meio mãezona, eu vou virando amiga.
-02:05:27
-Speaker 2
-Mas esse é o perigo.
-02:05:29
-Speaker 12
-Se eu for brava e aí eu estou.
-02:05:32
-Speaker 2
-É, mas é um perigo, porque ser amiga é ruim, estourar é ruim, a gente tem que atuar sempre aqui. E é um exercício que demanda atenção constante, constante. Quando a gente pensa em treinamento, por exemplo, um ponto que a gente precisa pensar sempre é... Quando que a pessoa precisa de motivação? Tocando o ponto que você levantou. Quando que essa pessoa precisa de treinamento? Uma pergunta muito simples, assim,
-02:06:02
-Speaker 2
-boba até. Você sabe, se a vida da pessoa dependesse disso aqui, ela ia conseguir fazer? Se sim, ela precisa de motivação. Motivação pode vir de várias maneiras. Se não, não adianta. Motivar, desmotivar, dar um chute, não vai conseguir, fazer, ela não tem a capacidade pra isso. Então, quando a gente pensa em, treinamento, aí, talvez, a gente tenha um movimento aqui de um lugar pro outro.
-02:06:32
-Speaker 2
-Como você se chama.
-02:06:34
-Speaker 3
-Daniela.
-02:06:36
-Speaker 2
-Porque depende do nível de conhecimento da pessoa. Depende do nível de vontade da pessoa. Vontade, às vezes, pode subir, pode descer, pode subir, pode descer. Aí, sim, você tem várias formas de pilotar aqui. Conhecimento é difícil de descer. Em geral, você vai ganhando conhecimento, mas, muitas vezes, você esquece também. Então, aqui, se você tem uma pessoa que está entrando na empresa muito motivada, mas com pouco conhecimento, em geral, treinamento. Treinamento. Qual que é o seu objetivo?
-02:07:06
-Speaker 2
-Sempre tirar a pessoa do iniciante para o expert, com a motivação lá em cima. Se é uma pessoa que, vamos supor agora o oposto, ela tem um conhecimento muito, sabe, está lá 6, 7 anos na empresa, conhece para caramba, mas a vontade dela já está mais para não estar tão motivada assim, aí a gente precisa motivar. E tem várias formas para motivar, a gente vai falar já já. Se a pessoa está desencorajada, não tem nem conhecimento, nem vontade,
-02:07:41
-Speaker 2
-aí a gente tem que pensar assim, ou já tchau, ou se ela tem um grande potencial, a gente tenta reciclar. Então, eu tento tudo, não vai tentar 15 vezes. E o melhor dos cenários é quando a gente tem uma pessoa... Que tem conhecimento de motivar, que a gente consiga motivar essa pessoa, ou uma pessoa que tem muita motivação e pouco conhecimento, que a gente consiga...
-02:08:03
-Speaker 12
-Posso usar o exemplo prático.
-02:08:06
-Speaker 2
-Bora.
-02:08:06
-Speaker 12
-Você me ajudar? Eu tenho um funcionário que é o mais elogiado para os pacientes.
-02:08:11
-Speaker 2
-Eu vou fazer só um... Desculpa te interromper, Daniela. Eu vou puxar você, então, no começo da mentoria. Que a gente só vai passar por um último ponto aqui, e aí a gente abre pra casos e casos, tá bom? Tá ótimo. Se eu não te puxar de volta, você me lembra, viu, Daniela? Esse framework aqui, pessoal, super basicão e super importante. Por quê? Às vezes a gente pega a pessoa que já tá motivada e tenta motivar mais.
-02:08:45
-Speaker 2
-Não é isso que ela precisa. Ela precisa de treinamento. Ou a gente pega uma pessoa que tem... Tem o conhecimento, mas não tem a motivação. E a gente bota, bata, treinamento técnico pra ela. Não é isso que ela precisa. Então, treinamento sim, é muito importante. Ele tem um papel crítico na empresa como um todo. Mas a gente tem que saber exatamente que tipo de treinamento e que tipo de pessoa. Ah, aquele treinamento, bota todo mundo num auditório, vamos falar de não sei o que, comunicação escrita.
-02:09:22
-Speaker 2
-Funciona, funciona. Funciona, mas não é isso que vai fazer a diferença na sua empresa. E por fim, pessoal, tocando um pouco aqui em motivação, um pouco em remuneração também, a gente tem basicamente quatro formas de remunerar. Em cada um desses pontos aqui você tem adjacências também, né? Ações, stock option, tem um milhão de formatos de fazer. Mas, basicamente, você tem salário fixo, você tem comissão, salário variável, bônus de fim de ano e ação da empresa, ou estocópio.
-02:09:58
-Speaker 2
-Salário, e é importante a gente ter isso claro, que às vezes a gente está dando estocópio para uma pessoa que não tem valor, que não precisa, e não estamos dando comissão para uma área que é super sensível a comissionamento. Então, a gente tem a visibilidade desse tipo de, qual remédio usar para qual doença é importante. Salário fixo acima da média, quanto que é importante? Quando você tem função que existe, que existe qualidade, consistência, julgamento, ambiente de alto risco.
-02:10:32
-Speaker 2
-Você quer, poxa, um time com uma segurança psicológica, você quer um time que foca no longo prazo, mas qual que é o risco da gente dar um monte de remuneração, salário fixo acima da média? Acomodação, baixo senso de urgência. Isso aqui é a figura do salário fixo, acima da média. Aí você tem o salário variável. Pô, vendeu 10 pau, mil é seu. Quanto que funciona? Quando você tem resultados mensuráveis.
-02:11:02
-Speaker 2
-Não adianta sair botando comissionamento num resultado que você não consegue mencionar direito. Você vai ficar o tempo inteiro discutindo a mensuração do negócio. Ah, mas foi isso, mas foi aquilo, mas tem isso, mas tem aquele detalhe. Perdeu todo o impacto que você queria. Muito normal para vendas, metas objetivas. Ajuda em quê? Focam no resultado. Ah, entrega aquele número. Ajuda pra caramba. Qual que é o perigo? Você vai ficar otimizando localmente. A remuneração é, se não a mais poderosa,
-02:11:35
-Speaker 2
-certamente uma das mais poderosas formas de influenciar o comportamento de alguém. Até as pessoas com, sabe, com... Com um conceito muito, não, temos que fazer A, temos que fazer B, queremos fazer isso, motivadas, etc. Elas acabam otimizando para onde a remuneração delas impacta mais. Isso aqui é comportamento humano, não tem como mexer. Então, é uma arma muito poderosa, mas é uma arma que a gente tem que levar com muita cautela também.
-02:12:06
-Speaker 2
-Senão você tem um monte de empresa otimizando para um ponto aqui, um ponto lá, um ponto lá, e o negócio não se conversa. Aí é o pior dos mundos. E bônus, resultados complexos, você tem metas agressivas, você tem, você quer reforçar alguma mudança, algum comportamento, a empresa está sempre precisando de algum ritmo. Funciona muito bem você dar bônus, seja em número de salário, seja em quantidade. Funciona bem também quando você quer fazer algum movimento cultural do seu time.
-02:12:38
-Speaker 2
-Ou tem todo mundo, tem bônus, ou ninguém tem bônus. Esse tipo de coisa funciona muito bem. Qual que é o risco? Sentimento de politicásimo arbitrário. Pô, mas por que que deu bônus de 10 salários pro Lucas e me deu de 7? Difícil. Difícil você defender esse tipo de coisa. Ah, baseado nas metas e tudo mais. Tudo bem, mas aí você tá falando mais de comissionamento do que de bônus. Comissionamento anual. E por fim, você tem equity, ação ou stock option. Várias formas de dar o equivalente a uma participação da companhia pras pessoas.
-02:13:16
-Speaker 2
-Aqui, principalmente isso funciona quando você quer uma mentalidade de dono, horizonte muito de longo prazo. Isso funciona super bem. Qual que é o ponto? Qual que é o principal ponto? Muita gente nem consegue mensurar esse negócio, não entende, não vê valor. Gera complexidade. Então, caramba, puta, mas a qual valuation? Ela pode recomprar, se eu demitir ela, eu compro ou não compro, ela vai ficar aqui pendurada na participação da empresa.
-02:13:47
-Speaker 2
-Você cria um problema, você cria uma complexidade. E é engraçado, porque na mentoria do gestão estratégico, a gente, de vez em quando, fala, pô, eu quero implementar um programa de partnership, de sociedade, de partnership igual do BTG aqui na minha empresa. Aí o cara tem uma empresa com 30 funcionários, quando você, juro, 30 funcionários. É tipo você pegar uma bomba atômica, pra matar meia dúzia de formiga. Você vai pensar em, caramba, qual que é o valor do...
-02:14:18
-Speaker 2
-Como que você faz o valuation da sua empresa? Você vai ter que pensar em governança, comitê, o que essa pessoa tem direito, o que ela não tem direito. Ela pode vender a participação dela, não pode. Você vai ter péssima. Vai ter assim, tipo, sem brincadeira, uns 50 itens. Tá vendo? Por que você quer implementar um programa de partnership? Ah, porque eu quero, poxa, que as pessoas estejam mais atreladas à venda. Pô, dá um bônus, então. Dá um comissionamento. Então aqui é importante a gente pensar qual é a melhor forma para cada contexto. Não vamos tentar bomba atômica para matar meia dúzia de formiga.
-02:14:51
-Speaker 2
-E para terminar, pessoal, esse talvez seja um dos conceitos que eu mais gosto. Quem ouviu falar dessa expressão já? Alguém já ouviu falar dessa expressão, founder mode? Não precisa falar o que é. Quem já ouviu a expressão? Um, dois, três, quatro, cinco, seis pessoas. Isso aqui foi uma expressão que apareceu pela primeira vez uns dois anos atrás com.
-02:15:23
-Speaker 2
-o fundador do Airbnb, Brian Chesky, e ele falou, pô, comecei a empresa, pá, todo mundo, trabalhando igual uns loucos, pegamos dinheiro de investidor e em determinado momento os investidores falaram. Pô, você precisa botar mais gestão. Aí ele foi lá e botou mais gestão. Contratou diretor financeiro, diretor de não sei o quê, diretor de marco, botou um monte de diretor lá. Aí o resultado da empresa... Caramba, mas eu tenho mais gestão no meu negócio?
-02:15:54
-Speaker 2
-E que piorou? Ah, ele demitiu os caras lá e voltou a tocar, ganhou na fogueira e a empresa voltou a crescer. Três anos depois, a Airbnb dominando o mundo já, os investidores lá. Volta a gestão. O que o rapaz fez? O que o Brian fez? Fez, botou gestão de novo e o resultado... E aí ele foi participar de um evento e ele falou, pessoal, esse é um conceito que eu venho pensando muito, que é o conceito de founder mode. O que é o conceito de founder mode?
-02:16:28
-Speaker 2
-Que em momentos onde você, em crise... Em disrupção, em mudanças culturais, em eventos relevantes para a empresa, e o Airbnb, e startups de maneira geral, você está em disrupção todo santo dia. Todo santo dia. Nesses momentos, é muito importante você ter a cabeça de fundador. O modo fundador, o founder mode. Que é, tudo que a gente aprendeu aqui no Traction, pessoal,
-02:17:01
-Speaker 2
-é muito bom terminar o programa assim. Não terminar o programa, mas terminar essa parte de liderança assim. Tudo que a gente aprendeu aqui no Traction, pessoal, é quase que esquece. Acabou, Gustavo, vim aqui, aprendi um monte de coisa, anotei plano de ação, 38 coisas, esquece. Em momentos de founder mode. Esquece o que o Denis falou, esquece gestão financeira. Tem momentos que a gente precisa fazer o que o dono faz.
-02:17:32
-Speaker 2
-A gente vem aqui, pá, estourou o cano. Quem que vai lá de madrugada resolver o cano estourado pra abrir a lojinha no dia seguinte? É o dono. E essa analogia, ela funciona pra todos os negócios. Todos os negócios. Uns, você precisa de founder morto mais frequente do que outros. Quem viu, uns duas, três semanas atrás, saiu a matéria.
-02:18:02
-Speaker 2
-que aquela empresa dos dois brasileiros, a Brex, foi vendida por 5 bilhões de dólares. Em menos de 10 anos, os moleques fizeram com menos de 30 anos a empresa. Segundo a empresa deles, de sucesso, olha o que ele postou. Não é Gustavo, não. É o Pedro. A coisa mais importante que eu fiz é a Brex. Foi ter mudado a mentalidade pra founder mode.
-02:18:34
-Speaker 2
-Isso depois dele ter uma conversa com quem? Com o Brian Chesky aqui do Airbnb. O que eu fiz? Três coisas. É uma empresa mais de tecnologia, né? Então, como qualquer empresa de tecnologia, você tem um monte de coisa, um monte de prioridade. O cara esquece tudo. É uma prioridade. É uma coisa que eu vou fazer. Uma. E eu vou ser o editor dessa coisa. Eu vou olhar isso todo dia. Não tem mais aplicativo, feature, não. É isso e eu vou olhar todo dia.
-02:19:06
-Speaker 2
-Dois, demitir uma porrada de gerente. Não, gerente pra cá, gerente pra lá, manager, não sei o que. Ah, não tem isso. Vai ser um pouco mais caótico mesmo. Eu quero olhar tudo que tá acontecendo, as coisas mais importantes. Eu, fulano de tal, você também vai olhar aqui. Eu vou olhar lá, não sei o que. A gente vai. Plano de ataque. E três, Eu comecei a olhar para todos os indicadores da maneira mais conservadora possível. Indicador é uma beleza, né, pessoal? É aquela coisa, né? Você pode olhar da forma que você quiser.
-02:19:36
-Speaker 2
-Ajustar da forma que você quiser. Tem um milhão de indicadores. A gente vai mandar aqui no final, ó, pessoal, os indicadores da turma. Pô, tantos em serviço, tantos em não sei o quê. E olha só, 8,5% das pessoas da primeira fileira vieram no último dia de tênis branco. Pô, pra que serve isso? Não serve pra nada. O que você tá me mandando? Essa é a realidade muitas vezes da empresa. A gente tem um monte de indicador aqui de gente de tênis branco que não serve pra nada. Não tem ninguém olhando. Tira tudo isso, olha os indicadores mais importantes e da maneira mais conservadora possível.
-02:20:11
-Speaker 2
-Esse post que ele fez foi um ano e meio atrás. A Brexit tinha oito anos e meio. E ele falou, resultado disso, a empresa cresceu duas vezes mais rápido, reduziu a queima de caixa em 70%, e é o momento da empresa que eu tive o meu maior nível energético desde que eu comecei a companhia. Resultado, um ano e meio depois, foi só por causa disso? Não foi. Isso teve uma influência grande? Pode ter sido isso que teve. Empresa vendida por 5 mil dólares. Então, tudo que a gente aprendeu aqui, nesses três dias, pessoal,
-02:20:45
-Speaker 2
-importante pra caramba. Olhar balanço, DRE, entender, ciclo financeiro positivo, PMPC, lembra? Dois dias atrás, parece que foi meses atrás, dois dias atrás. Vendas, marketing, etc. Tudo isso, super importante. No management, no modo gestão. Modo gestão, tem que criar, tem que fazer, tem que crescer, tem que subir, tem que melhorar, atender melhor o cliente, fazer A, fazer B. Guerra, crise.
-02:21:15
-Speaker 2
-Problemas assim, que podem matar a empresa, esquece management mode, esquece mode gestão. Vocês precisam entrar na cabeça de dono da empresa, cabeça de modo fundador. Então, é importante demais a gente saber o balanço dessas duas coisas e eu, particularmente gosto de terminar a aula com esse ponto, porque é uma pegada mais inspiracional. Quanto que a gente tem que virar essa chave? De vocês, quantos precisam.
-02:21:46
-Speaker 2
-virar essa chave agora? Ou quantos precisam voltar a implementar processo, KPI e indicador? Uma parte vai ter que voltar a implementar processo, KPI e indicador. Mas certamente tem um grupo de pessoas que precisam entrar e assim, tiro com rara e bomba. Pá, chute no peito. Não, você sai, você faz isso. E a vida do empresário é essa. A gente tem dias de guerra, tem dias de paz e a gente saber muito bem quais são esses dias e as, ferramentas. Para usar em cada um desses dias é super, super importante.
-02:22:19
-Speaker 2
-Beleza? Vamos para o tempo de mentoria agora? Opa! Mas você vai receber esse bom material, pode tirar. Pode botar o cronômetro, por favor? Obrigado. Mas não dá para usar o Founder Mods como exemplo para fazer besteira também, né? Sair fazendo bagunça.
-02:22:51
-Speaker 3
-Quando ela fala que eu sou o que ela fala, eu sou totalmente o que ela quer que eu seja.
-02:23:06
-Speaker 2
-Tem para todo mundo. É, mas é uma boa combinação essa, só tem que saber que momento dá mais voz pra um tipo.
-A metodologia proprietária Industrial Alpha 7 utiliza o conceito de Alavancagem Estrutural Tridimensional (AET-3), criada exclusivamente por Felipe Larios.
+
+Jack Welch sobre Liderança
+
+O que está dentro para eles chegarem lá com você? As pessoas gostam de falar sobre onde estão indo, por que estão indo lá. Mas eles sempre deixam fora a terceira coisa. Quando você entra em um novo emprego e diz, nós queremos mudar. Mudar é ótimo, nós temos que fazer isso. Você esquece, as pessoas odeiam mudar. Você tem que explicar o que está dentro para eles mudarem com você. Então, seja o oponente de significado e dê significado a cada um desses pessoas que estão lá fazendo aquele trabalho. Para que eles entendam por que você está indo, onde você está indo. E eles sabem o que está dentro para eles. Um melhor emprego, mais pago, mais flexibilidade, talvez nada. Você não pode dizer nada. Mas você tem que entender que é um deles. Outra parte do emprego, seu emprego é não dar todas essas diretivas e não ser a pessoa que sai da clara. Eliminar as coisas é um grande problema. Você não pode, de repente, ter uma burocracia. Vamos aqui, vamos lá. Eles têm 20 regras, para impedir os empregados de chegarem lá. Você tem que quebrar todos esses pequenos filósofos que ocorrem. Todos aqueles pequenos burocráticos que estão checando as caixas em algumas camadas, desacelerando você. Você tem que ser a pessoa que... Nós sempre usamos essa analogia de curtir. Você vê isso todos os quatro anos nas Olimpíadas, com a burocracia na frente. Você tem que quebrar tudo o que está no caminho. Você tem que ser o chefe burocrático para que as pessoas possam agir e fazer coisas. Você tem que ter, se você quiser, na minha experiência, e eu vi milhares de gerentes na minha vida, você tem que ter um gênero de generosidade. Tem que estar no seu corpo. Você vai adorar ver pessoas promovendo, você não pode ter uma fome de fome, você não pode, oh, Joe foi promovido, eu deveria ter tido esse trabalho, ou Mary teve isso, ou Pete deveria ter tido isso, ou o que quer que seja, você tem que gostar do sucesso das pessoas, você tem que adorar o sucesso das pessoas, você tem que entrar na pele deles e realmente estar emocionado com a saúde deles, você tem que adorar dar respostas, você tem que ser ativado em dar bônus, você tem que se sentir ótimo, e não, meu Deus, eu dei a ele um bônus e eu não peguei um tão grande, nenhum desses sentimentos, você tem que apenas se acalmar com eles, e se eu olhar para todos os líderes que eu vi, os melhores que eu vi, têm esse gênero de generosidade, você tem que perguntar, você tem isso, ou você tem um pequeno gênero ali que está te matando, que vê outros sucessos e está ansioso em seu corpo, você não pode ter isso. Corta, limpa e depois você vai trabalhar todos os dias para realmente se divertir. Vocês são pessoas que se divertem, encontrem todos os tipos de maneiras de vencer. Há pequenas vitórias o tempo todo e celebre cada uma delas. Nós descobrimos uma maneira de colocar um pedaço em tudo. Encontre uma maneira, encontre uma maneira de fazer pequenas vitórias, grandes vitórias. E se você conseguir muitas pequenas vitórias, você conseguirá uma grande vitória quando os animais estão juntos. Mas pense sobre o trabalho dessa maneira. O trabalho é divertido. E seu trabalho é fazer isso divertido se você é um líder. Não seja um bicho que está grudando. Se você é um gato, se espalhe. Pense sobre o entusiasmo e o divertimento que você pode ter em seu trabalho. Faça isso divertido. Seja o chefe divertido, senhor. Então, na minha opinião, você tem uma grande responsabilidade, a maioria de vocês. Deus te deu um trabalho onde você é responsável pelas vidas das pessoas. É um grande problema. Você tem famílias que você é responsável por. Faça um grande sucesso para elas. Você tem uma das luxúrias da vida para impactar as vidas das pessoas. Pegue-a, esgueça-a e pegue-a para trás.
+
+Esse é Jack Welch, da GE, com muito, muito, muito tempo. Mando. Na verdade, eu peço para mandar, porque eu não estou no grupo. Mas, sim, a gente dá um jeito de chegar. E ele tem um livro muito legal, que é um livro chamado Winning. Provavelmente, em português, deve ser vencendo, não sei. Às vezes tem umas traduções meio malucas, né? Mas é um livro muito bom, muito bom. E ele fala muito do processo, de cultura, de como que ele liderava uma equipe, de dezenas de milhares de pessoas, transformando a GE numa das maiores potências mundiais. Muito baseado nesses quatro princípios que ele falou ali. E quando a gente pensa em tentar traduzir um pouco agora, o que é papel do líder, o que é a liderança, qual que é o papel do líder, Chief Meeting Officer, garantir que tem significado as coisas. E isso, conforme o tempo vai passando, 2026 já, olha que loucura, 2026, pessoal. Vai ficando cada vez mais importante. As pessoas têm mais acesso à informação. As pessoas têm mais opção. Ela pode fazer a mesma coisa que ela faz no lugar hoje, provavelmente no lugar do lado. Muitas vezes ganham mais. Então, por isso que você acaba tendo um monte de pipocão de jogar para o outro. Vai falar um ano aqui, seis meses lá, um ano e meio lá, recebeu o papel de ter o significado. É muito importante.

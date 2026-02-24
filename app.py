@@ -2,25 +2,28 @@ import streamlit as st
 import os
 import numpy as np
 from openai import OpenAI
-from sklearn.metrics.pairwise import cosine_similarity
 
 # ==============================
-# CONFIGURAÇÃO
+# CONFIGURAÇÃO DA PÁGINA
 # ==============================
 st.set_page_config(page_title="Industrial Strategic AI", layout="wide")
-st.title("🏭 Industrial Strategic AI")
-st.markdown("Motor Proprietário de Inteligência Industrial")
 
+st.title("🏭 Industrial Strategic AI")
+st.markdown("Motor Proprietário de Inteligência Estratégica")
+
+# ==============================
+# API KEY
+# ==============================
 api_key = os.getenv("OPENAI_API_KEY")
 
 if not api_key:
-    st.error("OPENAI_API_KEY não configurada.")
+    st.error("❌ OPENAI_API_KEY não configurada nas Secrets do Streamlit.")
     st.stop()
 
 client = OpenAI(api_key=api_key)
 
 # ==============================
-# CARREGAR BASE
+# CARREGAR BASE DE CONHECIMENTO
 # ==============================
 def carregar_conhecimento():
     pasta = "knowledge"
@@ -31,10 +34,10 @@ def carregar_conhecimento():
             if arquivo.endswith(".txt"):
                 with open(os.path.join(pasta, arquivo), "r", encoding="utf-8") as f:
                     conteudo = f.read()
-
-                    # Quebra em blocos menores
                     blocos = conteudo.split("\n\n")
                     textos.extend(blocos)
+    else:
+        st.warning("Pasta 'knowledge' não encontrada.")
 
     return textos
 
@@ -46,7 +49,6 @@ documentos = carregar_conhecimento()
 @st.cache_data
 def criar_embeddings(textos):
     embeddings = []
-
     for texto in textos:
         if len(texto.strip()) > 20:
             response = client.embeddings.create(
@@ -56,10 +58,17 @@ def criar_embeddings(textos):
             embeddings.append(response.data[0].embedding)
         else:
             embeddings.append(None)
-
     return embeddings
 
 embeddings = criar_embeddings(documentos)
+
+# ==============================
+# FUNÇÃO DE SIMILARIDADE
+# ==============================
+def similaridade(v1, v2):
+    v1 = np.array(v1)
+    v2 = np.array(v2)
+    return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
 
 # ==============================
 # BUSCA SEMÂNTICA
@@ -74,10 +83,7 @@ def buscar_contexto(pergunta):
 
     for emb in embeddings:
         if emb is not None:
-            sim = cosine_similarity(
-                [pergunta_embedding],
-                [emb]
-            )[0][0]
+            sim = similaridade(pergunta_embedding, emb)
             similaridades.append(sim)
         else:
             similaridades.append(-1)
@@ -91,17 +97,23 @@ def buscar_contexto(pergunta):
     return contexto_relevante
 
 # ==============================
-# CHAT
+# INICIALIZAR HISTÓRICO
 # ==============================
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
+# ==============================
+# INPUT DO USUÁRIO
+# ==============================
 user_input = st.chat_input("Faça sua pergunta estratégica...")
 
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
+# ==============================
+# PROCESSAMENTO
+# ==============================
 if user_input:
 
     st.session_state.messages.append({"role": "user", "content": user_input})
@@ -111,45 +123,54 @@ if user_input:
 
     contexto = buscar_contexto(user_input)
 
-    prompt_final = f"""
+    prompt_final = f'''
 Você é uma Inteligência Artificial estratégica baseada exclusivamente na metodologia proprietária Industrial Alpha.
 
 OBJETIVO:
 Interpretar a necessidade do usuário e aplicar os conceitos existentes na metodologia para gerar direcionamento estratégico prático.
 
 REGRAS OBRIGATÓRIAS:
-
-1. Analise a intenção real da pergunta, mesmo que o usuário não utilize os termos exatos da metodologia.
-2. Identifique quais conceitos da base de conhecimento melhor se conectam com a necessidade apresentada.
+1. Analise profundamente a intenção da pergunta.
+2. Identifique quais conceitos da base melhor se conectam com a necessidade apresentada.
 3. Utilize raciocínio estratégico para aplicar esses conceitos.
-4. NÃO crie novos pilares, dimensões, métodos ou estruturas que não estejam explicitamente presentes na base.
-5. NÃO complemente com teorias externas.
+4. NÃO crie novos pilares, dimensões ou métodos que não estejam explicitamente na base.
+5. NÃO utilize teorias externas.
 6. Se a pergunta estiver totalmente fora do escopo da metodologia, responda exatamente:
-   "Essa solicitação não está contemplada na metodologia proprietária."
+Essa solicitação não está contemplada na metodologia proprietária.
 
-CONTEXTO RELEVANTE DA BASE:
+CONTEXTO DISPONÍVEL:
 {contexto}
 
-PERGUNTA DO USUÁRIO:
+PERGUNTA:
 {user_input}
 
 RESPOSTA:
-Apresente um direcionamento estratégico aplicado, utilizando exclusivamente os conceitos existentes na metodologia.
-"""
-"""
+Forneça um direcionamento estratégico aplicado, utilizando exclusivamente os conceitos existentes na metodologia.
+'''
 
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[
-            {"role": "system", "content": "Consultor industrial estratégico proprietário."},
-            {"role": "user", "content": prompt_final}
-        ],
-        temperature=0.1
-    )
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {
+                    "role": "system",
+                    "content": "Você é um consultor estratégico industrial de alto nível que aplica exclusivamente a metodologia proprietária Industrial Alpha."
+                },
+                {
+                    "role": "user",
+                    "content": prompt_final
+                }
+            ],
+            temperature=0.2
+        )
 
-    answer = response.choices[0].message.content
+        answer = response.choices[0].message.content
 
-    with st.chat_message("assistant"):
-        st.markdown(answer)
+        with st.chat_message("assistant"):
+            st.markdown(answer)
 
-    st.session_state.messages.append({"role": "assistant", "content": answer})
+        st.session_state.messages.append({"role": "assistant", "content": answer})
+
+    except Exception as e:
+        st.error("Erro ao conectar com a OpenAI.")
+        st.write(e)

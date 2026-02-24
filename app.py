@@ -1,72 +1,107 @@
 import streamlit as st
 import os
+import numpy as np
 from openai import OpenAI
+from sklearn.metrics.pairwise import cosine_similarity
 
-# ======================================
-# CONFIGURAÇÃO DA PÁGINA
-# ======================================
-st.set_page_config(
-    page_title="Industrial AI Assistant",
-    layout="wide"
-)
+# ==============================
+# CONFIGURAÇÃO
+# ==============================
+st.set_page_config(page_title="Industrial Strategic AI", layout="wide")
+st.title("🏭 Industrial Strategic AI")
+st.markdown("Motor Proprietário de Inteligência Industrial")
 
-st.title("🏭 Industrial AI Assistant")
-st.markdown("Inteligência Estratégica Proprietária para Indústria e Gestão")
-
-# ======================================
-# CAPTURA SEGURA DA API KEY
-# ======================================
 api_key = os.getenv("OPENAI_API_KEY")
 
 if not api_key:
-    st.error("❌ OPENAI_API_KEY não configurada. Configure nas Secrets do Streamlit.")
+    st.error("OPENAI_API_KEY não configurada.")
     st.stop()
 
 client = OpenAI(api_key=api_key)
 
-# ======================================
-# CARREGAR BASE DE CONHECIMENTO FIXA
-# ======================================
+# ==============================
+# CARREGAR BASE
+# ==============================
 def carregar_conhecimento():
-    base_texto = ""
     pasta = "knowledge"
+    textos = []
 
     if os.path.exists(pasta):
         for arquivo in os.listdir(pasta):
-            caminho = os.path.join(pasta, arquivo)
-
             if arquivo.endswith(".txt"):
-                try:
-                    with open(caminho, "r", encoding="utf-8") as f:
-                        base_texto += f.read() + "\n\n"
-                except Exception as e:
-                    st.warning(f"Erro ao ler {arquivo}: {e}")
-    else:
-        st.warning("⚠️ Pasta 'knowledge' não encontrada no repositório.")
+                with open(os.path.join(pasta, arquivo), "r", encoding="utf-8") as f:
+                    conteudo = f.read()
 
-    return base_texto
+                    # Quebra em blocos menores
+                    blocos = conteudo.split("\n\n")
+                    textos.extend(blocos)
 
-BASE_CONHECIMENTO = carregar_conhecimento()
+    return textos
 
-# ======================================
-# HISTÓRICO DE CONVERSA
-# ======================================
+documentos = carregar_conhecimento()
+
+# ==============================
+# CRIAR EMBEDDINGS
+# ==============================
+@st.cache_data
+def criar_embeddings(textos):
+    embeddings = []
+
+    for texto in textos:
+        if len(texto.strip()) > 20:
+            response = client.embeddings.create(
+                model="text-embedding-3-small",
+                input=texto
+            )
+            embeddings.append(response.data[0].embedding)
+        else:
+            embeddings.append(None)
+
+    return embeddings
+
+embeddings = criar_embeddings(documentos)
+
+# ==============================
+# BUSCA SEMÂNTICA
+# ==============================
+def buscar_contexto(pergunta):
+    pergunta_embedding = client.embeddings.create(
+        model="text-embedding-3-small",
+        input=pergunta
+    ).data[0].embedding
+
+    similaridades = []
+
+    for emb in embeddings:
+        if emb is not None:
+            sim = cosine_similarity(
+                [pergunta_embedding],
+                [emb]
+            )[0][0]
+            similaridades.append(sim)
+        else:
+            similaridades.append(-1)
+
+    top_indices = np.argsort(similaridades)[-3:]
+
+    contexto_relevante = ""
+    for i in top_indices:
+        contexto_relevante += documentos[i] + "\n\n"
+
+    return contexto_relevante
+
+# ==============================
+# CHAT
+# ==============================
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# ======================================
-# INPUT DO USUÁRIO
-# ======================================
 user_input = st.chat_input("Faça sua pergunta estratégica...")
 
-# Mostrar histórico
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-# ======================================
-# PROCESSAMENTO DA IA
-# ======================================
 if user_input:
 
     st.session_state.messages.append({"role": "user", "content": user_input})
@@ -74,64 +109,36 @@ if user_input:
     with st.chat_message("user"):
         st.markdown(user_input)
 
-    # ======================================
-    # PROMPT ESTRATÉGICO PROFISSIONAL
-    # ======================================
-    contexto = f"""
-Você é a Inteligência Artificial proprietária de uma metodologia estratégica industrial.
+    contexto = buscar_contexto(user_input)
 
-Sua função é atuar como:
+    prompt_final = f"""
+Você é uma IA proprietária da metodologia Industrial Alpha.
 
-- Consultor Industrial
-- Mentor Empresarial
-- Especialista em Otimização Financeira
-- Estrategista de Crescimento
+REGRAS OBRIGATÓRIAS:
+1. Use APENAS o contexto abaixo.
+2. NÃO utilize conhecimento externo.
+3. Se a resposta não estiver no contexto, responda:
+   "Não encontrado na metodologia proprietária."
 
-Baseie suas respostas PRIORITARIAMENTE na base de conhecimento abaixo.
-Caso o tema não esteja explicitamente descrito, complemente com boas práticas reais de mercado.
+CONTEXTO:
+{contexto}
 
-========================
-BASE DE CONHECIMENTO:
-========================
-
-{BASE_CONHECIMENTO}
-
-========================
-PERGUNTA DO USUÁRIO:
-========================
-
+Pergunta:
 {user_input}
-
-Responda de forma:
-- Estratégica
-- Clara
-- Aplicável
-- Direta para tomada de decisão
 """
 
-    try:
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {
-                    "role": "system",
-                    "content": "Você é um consultor estratégico industrial de alto nível."
-                },
-                {
-                    "role": "user",
-                    "content": contexto
-                }
-            ],
-            temperature=0.3
-        )
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": "Consultor industrial estratégico proprietário."},
+            {"role": "user", "content": prompt_final}
+        ],
+        temperature=0.1
+    )
 
-        answer = response.choices[0].message.content
+    answer = response.choices[0].message.content
 
-        with st.chat_message("assistant"):
-            st.markdown(answer)
+    with st.chat_message("assistant"):
+        st.markdown(answer)
 
-        st.session_state.messages.append({"role": "assistant", "content": answer})
-
-    except Exception as e:
-        st.error("Erro ao conectar com a OpenAI.")
-        st.write(e)
+    st.session_state.messages.append({"role": "assistant", "content": answer})

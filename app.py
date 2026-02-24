@@ -71,7 +71,7 @@ def similaridade(v1, v2):
     return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
 
 # ==============================
-# BUSCA SEMÂNTICA
+# BUSCA SEMÂNTICA (RAG)
 # ==============================
 def buscar_contexto(pergunta):
     pergunta_embedding = client.embeddings.create(
@@ -97,14 +97,16 @@ def buscar_contexto(pergunta):
     return contexto_relevante
 
 # ==============================
-# INICIALIZAR HISTÓRICO
+# HISTÓRICO
 # ==============================
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
 # ==============================
-# INPUT DO USUÁRIO
+# INPUT
 # ==============================
+gerar_video = st.toggle("🎬 Gerar roteiro de vídeo de mentoria")
+
 user_input = st.chat_input("Faça sua pergunta estratégica...")
 
 for msg in st.session_state.messages:
@@ -123,30 +125,57 @@ if user_input:
 
     contexto = buscar_contexto(user_input)
 
-    prompt_final = f'''
+    if gerar_video:
+        prompt_final = f"""
 Você é uma Inteligência Artificial estratégica baseada exclusivamente na metodologia proprietária Industrial Alpha.
 
-OBJETIVO:
-Interpretar a necessidade do usuário e aplicar os conceitos existentes na metodologia para gerar direcionamento estratégico prático.
+MODO ATIVO: GERAÇÃO DE ROTEIRO DE VÍDEO DE MENTORIA.
 
-REGRAS OBRIGATÓRIAS:
-1. Analise profundamente a intenção da pergunta.
-2. Identifique quais conceitos da base melhor se conectam com a necessidade apresentada.
-3. Utilize raciocínio estratégico para aplicar esses conceitos.
-4. NÃO crie novos pilares, dimensões ou métodos que não estejam explicitamente na base.
-5. NÃO utilize teorias externas.
-6. Se a pergunta estiver totalmente fora do escopo da metodologia, responda exatamente:
+MISSÃO:
+Interpretar profundamente a necessidade real do usuário, mesmo que ele não utilize os termos exatos da metodologia.
+Você deve identificar a intenção estratégica implícita e conectar com os conceitos mais aderentes da base de conhecimento.
+
+REGRAS ABSOLUTAS:
+1. Utilize exclusivamente o conteúdo presente na base fornecida.
+2. Nunca invente novos métodos, pilares ou teorias.
+3. Se não houver aderência clara ao conteúdo, responda exatamente:
 Essa solicitação não está contemplada na metodologia proprietária.
 
-CONTEXTO DISPONÍVEL:
+ESTRUTURA DO VÍDEO:
+- 🎯 Título estratégico
+- 🔥 Abertura com gancho executivo
+- 🧠 Diagnóstico estratégico
+- 🏭 Aplicação prática empresarial
+- 📈 Plano de ação estruturado
+- 🚀 Encerramento com direcionamento executivo
+
+CONTEXTO DA METODOLOGIA:
 {contexto}
 
-PERGUNTA:
+PERGUNTA DO USUÁRIO:
 {user_input}
+"""
+    else:
+        prompt_final = f"""
+Você é uma Inteligência Artificial estratégica baseada exclusivamente na metodologia proprietária Industrial Alpha.
 
-RESPOSTA:
-Forneça um direcionamento estratégico aplicado, utilizando exclusivamente os conceitos existentes na metodologia.
-'''
+MISSÃO:
+Interpretar profundamente a intenção do usuário, mesmo que ele não utilize os termos exatos da metodologia.
+Você deve entender o problema real e conectar com os conceitos mais aderentes da base de conhecimento.
+
+REGRAS ABSOLUTAS:
+1. Use exclusivamente os conceitos presentes no CONTEXTO.
+2. Não crie novos frameworks.
+3. Não utilize teorias externas.
+4. Se a pergunta não estiver contemplada na metodologia, responda exatamente:
+Essa solicitação não está contemplada na metodologia proprietária.
+
+CONTEXTO DA METODOLOGIA:
+{contexto}
+
+PERGUNTA DO USUÁRIO:
+{user_input}
+"""
 
     try:
         response = client.chat.completions.create(
@@ -154,7 +183,13 @@ Forneça um direcionamento estratégico aplicado, utilizando exclusivamente os c
             messages=[
                 {
                     "role": "system",
-                    "content": "Você é um consultor estratégico industrial de alto nível que aplica exclusivamente a metodologia proprietária Industrial Alpha."
+                    "content": """
+Você é um consultor estratégico industrial de alto nível.
+Aplica exclusivamente a metodologia Industrial Alpha.
+Interprete intenção implícita.
+Conecte problema → conceito → aplicação prática.
+Nunca invente novos métodos.
+"""
                 },
                 {
                     "role": "user",

@@ -2,6 +2,7 @@ import streamlit as st
 import os
 import numpy as np
 from openai import OpenAI
+import requests
 
 # ==============================
 # CONFIGURAÇÃO DA PÁGINA
@@ -97,6 +98,57 @@ def buscar_contexto(pergunta):
     return contexto_relevante
 
 # ==============================
+# GERAR VÍDEO NO HEYGEN
+# ==============================
+def gerar_video_heygen(texto):
+
+    heygen_api_key = os.getenv("HEYGEN_API_KEY")
+
+    if not heygen_api_key:
+        return None, "HEYGEN_API_KEY não configurada."
+
+    url = "https://api.heygen.com/v2/video/generate"
+
+    headers = {
+        "X-Api-Key": heygen_api_key,
+        "Content-Type": "application/json"
+    }
+
+    payload = {
+        "video_inputs": [
+            {
+                "character": {
+                    "type": "avatar",
+                    "avatar_id": "Bryan_public"
+                },
+                "voice": {
+                    "type": "text",
+                    "input_text": texto,
+                    "voice_id": "en-US-GuyNeural"
+                }
+            }
+        ],
+        "test": False
+    }
+
+    response = requests.post(url, json=payload, headers=headers)
+
+    if response.status_code != 200:
+        return None, f"Erro HeyGen: {response.text}"
+
+    data = response.json()
+
+    if "video_url" in data.get("data", {}):
+        return data["data"]["video_url"], None
+
+    if "video_id" in data.get("data", {}):
+        video_id = data["data"]["video_id"]
+        return None, f"Vídeo em processamento. ID: {video_id}"
+
+    return None, "Resposta inesperada da API HeyGen."
+
+
+# ==============================
 # HISTÓRICO
 # ==============================
 if "messages" not in st.session_state:
@@ -105,7 +157,7 @@ if "messages" not in st.session_state:
 # ==============================
 # INPUT
 # ==============================
-gerar_video = st.toggle("🎬 Gerar roteiro de vídeo de mentoria")
+gerar_video = st.toggle("🎬 Gerar vídeo de mentoria executiva")
 
 user_input = st.chat_input("Faça sua pergunta estratégica...")
 
@@ -125,55 +177,68 @@ if user_input:
 
     contexto = buscar_contexto(user_input)
 
+    # ==============================
+    # PROMPT COMPLETO ATUALIZADO
+    # ==============================
     if gerar_video:
         prompt_final = f"""
-Você é uma Inteligência Artificial estratégica baseada exclusivamente na metodologia proprietária Industrial Alpha.
+Você é a Inteligência Estratégica Oficial da metodologia proprietária Industrial Alpha.
 
-MODO ATIVO: GERAÇÃO DE ROTEIRO DE VÍDEO DE MENTORIA.
+MODO ATIVO: ROTEIRO DE VÍDEO DE MENTORIA EXECUTIVA.
 
-MISSÃO:
-Interpretar profundamente a necessidade real do usuário, mesmo que ele não utilize os termos exatos da metodologia.
-Você deve identificar a intenção estratégica implícita e conectar com os conceitos mais aderentes da base de conhecimento.
+MISSÃO CENTRAL:
+Interpretar profundamente a intenção estratégica implícita na pergunta.
+Identificar o problema estrutural.
+Conectar PROBLEMA → CONCEITO → APLICAÇÃO PRÁTICA.
 
 REGRAS ABSOLUTAS:
-1. Utilize exclusivamente o conteúdo presente na base fornecida.
-2. Nunca invente novos métodos, pilares ou teorias.
-3. Se não houver aderência clara ao conteúdo, responda exatamente:
+1. Use exclusivamente o conteúdo do CONTEXTO.
+2. Não crie novos métodos ou frameworks.
+3. Não utilize teorias externas.
+4. Se não houver aderência clara, responda exatamente:
 Essa solicitação não está contemplada na metodologia proprietária.
 
-ESTRUTURA DO VÍDEO:
-- 🎯 Título estratégico
-- 🔥 Abertura com gancho executivo
-- 🧠 Diagnóstico estratégico
-- 🏭 Aplicação prática empresarial
-- 📈 Plano de ação estruturado
-- 🚀 Encerramento com direcionamento executivo
+ESTRUTURA OBRIGATÓRIA:
 
-CONTEXTO DA METODOLOGIA:
+🎯 Título Estratégico  
+🔥 Abertura Executiva  
+🧠 Diagnóstico Estratégico  
+🏭 Aplicação Empresarial  
+📈 Plano de Ação  
+🚀 Encerramento Executivo  
+
+CONTEXTO:
 {contexto}
 
-PERGUNTA DO USUÁRIO:
+PERGUNTA:
 {user_input}
 """
     else:
         prompt_final = f"""
-Você é uma Inteligência Artificial estratégica baseada exclusivamente na metodologia proprietária Industrial Alpha.
+Você é a Inteligência Estratégica Oficial da metodologia proprietária Industrial Alpha.
 
 MISSÃO:
-Interpretar profundamente a intenção do usuário, mesmo que ele não utilize os termos exatos da metodologia.
-Você deve entender o problema real e conectar com os conceitos mais aderentes da base de conhecimento.
+Interpretar profundamente a intenção do usuário.
+Conectar problema → conceito → aplicação prática.
 
 REGRAS ABSOLUTAS:
-1. Use exclusivamente os conceitos presentes no CONTEXTO.
-2. Não crie novos frameworks.
-3. Não utilize teorias externas.
-4. Se a pergunta não estiver contemplada na metodologia, responda exatamente:
+1. Use exclusivamente o conteúdo do CONTEXTO.
+2. Não invente métodos.
+3. Não use teorias externas.
+4. Se não houver aderência clara, responda exatamente:
 Essa solicitação não está contemplada na metodologia proprietária.
 
-CONTEXTO DA METODOLOGIA:
+FORMATO DA RESPOSTA:
+
+🧠 Diagnóstico Estratégico  
+🏭 Conexão com a Metodologia  
+📈 Aplicação Prática  
+🚀 Direcionamento Executivo  
+
+CONTEXTO:
 {contexto}
 
-PERGUNTA DO USUÁRIO:
+PERGUNTA:
 {user_input}
 """
 
@@ -184,11 +249,10 @@ PERGUNTA DO USUÁRIO:
                 {
                     "role": "system",
                     "content": """
-Você é um consultor estratégico industrial de alto nível.
-Aplica exclusivamente a metodologia Industrial Alpha.
-Interprete intenção implícita.
-Conecte problema → conceito → aplicação prática.
-Nunca invente novos métodos.
+Você é um consultor estratégico industrial sênior.
+Aplique exclusivamente a metodologia Industrial Alpha.
+Nunca invente conceitos externos.
+Sempre conecte problema → conceito → aplicação prática.
 """
                 },
                 {
@@ -205,6 +269,19 @@ Nunca invente novos métodos.
             st.markdown(answer)
 
         st.session_state.messages.append({"role": "assistant", "content": answer})
+
+        # ==============================
+        # GERAÇÃO DE VÍDEO
+        # ==============================
+        if gerar_video:
+            with st.spinner("🎬 Gerando avatar executivo..."):
+                video_url, erro = gerar_video_heygen(answer)
+
+            if erro:
+                st.warning(erro)
+            elif video_url:
+                st.markdown("### 🎥 Vídeo Gerado")
+                st.video(video_url)
 
     except Exception as e:
         st.error("Erro ao conectar com a OpenAI.")
